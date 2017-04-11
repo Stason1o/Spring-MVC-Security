@@ -13,10 +13,35 @@
 <head>
     <title>Person Page</title>
     <style type="text/css">
-        .tg  {border-collapse:collapse;border-spacing:0;border-color:#ccc;}
-        .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#fff;}
-        .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#ccc;color:#333;background-color:#f0f0f0;}
-        .tg .tg-4eph{background-color:#f9f9f9}
+        .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border-color: #ccc;
+        }
+
+        .tg td {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            overflow: hidden;
+            word-break: normal;
+            border: 1px solid #ccc;
+            color: #333;
+            background-color: #fff;
+        }
+
+        .tg th {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            font-weight: normal;
+            padding: 10px 5px;
+            overflow: hidden;
+            word-break: normal;
+            border: 1px solid #ccc;
+            color: #333;
+            background-color: #f0f0f0;
+        }
+
     </style>
 </head>
 <body>
@@ -24,9 +49,9 @@
     Add a Person
 </h1>
 
-<c:url var="addAction" value="/person/add" />
+<c:url var="addAction" value="/person/add"/>
 
-<form:form method="POST" action="${addAction}" modelAttribute="person">
+<form:form action="${addAction}" commandName="person">
     <table>
         <c:if test="${!empty person.name}">
             <tr>
@@ -36,8 +61,8 @@
                     </form:label>
                 </td>
                 <td>
-                    <form:input path="id" readonly="true" size="8"  disabled="true" />
-                    <form:hidden path="id" />
+                    <form:input path="id" readonly="true" size="8" disabled="true"/>
+                    <form:hidden path="id"/>
                 </td>
             </tr>
         </c:if>
@@ -48,7 +73,7 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="name" />
+                <form:input path="name"/>
             </td>
         </tr>
         <tr>
@@ -58,18 +83,18 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="country" />
+                <form:input path="country"/>
             </td>
         </tr>
         <tr>
             <td colspan="2">
                 <c:if test="${!empty person.name}">
                     <input type="submit"
-                           value="<spring:message text="Edit Person"/>" />
+                           value="<spring:message text="Edit Person"/>"/>
                 </c:if>
                 <c:if test="${empty person.name}">
                     <input type="submit"
-                           value="<spring:message text="Add Person"/>" />
+                           value="<spring:message text="Add Person"/>"/>
                 </c:if>
             </td>
         </tr>
@@ -91,8 +116,8 @@
                 <td>${person.id}</td>
                 <td>${person.name}</td>
                 <td>${person.country}</td>
-                <td><a href="<c:url value='/edit/${person.id}' />" >Edit</a></td>
-                <td><a href="<c:url value='/remove/${person.id}' />" >Delete</a></td>
+                <td><a href="<c:url value='/edit/${person.id}' />">Edit</a></td>
+                <td><a href="<c:url value='/remove/${person.id}' />">Delete</a></td>
             </tr>
         </c:forEach>
     </table>

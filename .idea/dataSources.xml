@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="3252344951">
-    <data-source source="LOCAL" name="MySQL - db_for_spring_security@localhost" uuid="95cd6a03-50f3-4c8b-b13f-6846f346b1d5">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="websitedb@localhost" uuid="40e131b0-2022-4cc9-b7e4-185d4593480b">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/db_for_spring_security</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/websitedb</jdbc-url>
       <driver-properties>
+        <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
         <property name="tinyInt1isBit" value="false" />
         <property name="characterEncoding" value="utf8" />

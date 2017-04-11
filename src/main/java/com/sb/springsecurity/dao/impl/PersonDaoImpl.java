@@ -15,10 +15,10 @@ import java.util.List;
 @Repository("personDao")
 public class PersonDaoImpl implements PersonDao {
 
-    @Autowired
     private SessionFactory sessionFactory;
 
-    public void setSessionFactory(SessionFactory sessionFactory) {
+    @Autowired
+    public PersonDaoImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
@@ -26,11 +26,12 @@ public class PersonDaoImpl implements PersonDao {
         System.out.println(p.getName());
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(p);
-
     }
 
     public void updatePerson(Person p) {
+        System.out.println(p.getName() + " " + p.getCountry() + "---------------------------------  ");
         Session session = this.sessionFactory.getCurrentSession();
+
         session.update(p);
     }
 
@@ -43,6 +44,7 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     public Person getPersonById(int id) {
+        System.out.println("In method PersonDaoImpl.getPersonById ----------------------------------");
         Session session = this.sessionFactory.getCurrentSession();
         return (Person) session.load(Person.class, id);
     }

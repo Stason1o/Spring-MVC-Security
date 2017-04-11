@@ -11,13 +11,14 @@ import java.util.Objects;
 public class Person {
 
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "name", nullable = false)
+    //    @Column(name = "name")
     private String name;
 
-    @Column(name = "country", nullable = false)
+    //    @Column(name = "country")
     private String country;
 
     public int getId() {

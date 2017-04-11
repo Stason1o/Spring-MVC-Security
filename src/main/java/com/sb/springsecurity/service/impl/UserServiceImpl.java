@@ -11,8 +11,12 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserServiceImpl implements UserService {
 
+	private final UserDao dao;
+
 	@Autowired
-	private UserDao dao;
+	public UserServiceImpl(UserDao dao) {
+		this.dao = dao;
+	}
 
 	public User findById(int id) {
 		return dao.findById(id);

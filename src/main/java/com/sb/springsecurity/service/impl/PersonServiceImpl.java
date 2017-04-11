@@ -12,13 +12,12 @@ import java.util.List;
  * Created by sbogdanschi on 11/04/2017.
  */
 @Service("personService")
-@Transactional
 public class PersonServiceImpl implements PersonService {
 
-    @Autowired
     private PersonDao personDao;
 
-    public void setPersonDao(PersonDao personDao) {
+    @Autowired
+    public PersonServiceImpl(PersonDao personDao) {
         this.personDao = personDao;
     }
 
@@ -31,6 +30,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional
     public void updatePerson(Person p) {
+        System.out.println("In method PersonServiceImpl.updatePerson!!!!!! " + p.getName()  + " " + p.getCountry());
         this.personDao.updatePerson(p);
     }
 
@@ -43,6 +43,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional
     public Person getPersonById(int id) {
+        System.out.println("In method PersonServiceImpl.getPersonById!!!!!! " + personDao.getPersonById(id));
         return this.personDao.getPersonById(id);
     }
 

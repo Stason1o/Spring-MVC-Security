@@ -1,4 +1,4 @@
-package com.sb.springsecurity.model;
+package com.sb.springsecurity.model.enums;
 
 public enum UserProfileType {
 	USER("USER"),
@@ -7,7 +7,7 @@ public enum UserProfileType {
 	
 	String userProfileType;
 	
-	private UserProfileType(String userProfileType){
+	UserProfileType(String userProfileType){
 		this.userProfileType = userProfileType;
 	}
 	

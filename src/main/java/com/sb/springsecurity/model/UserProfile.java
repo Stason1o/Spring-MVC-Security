@@ -1,5 +1,7 @@
 package com.sb.springsecurity.model;
 
+import com.sb.springsecurity.model.enums.UserProfileType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

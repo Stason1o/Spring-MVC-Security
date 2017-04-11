@@ -1,5 +1,7 @@
 package com.sb.springsecurity.model;
 
+import com.sb.springsecurity.model.enums.State;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,7 +29,7 @@ public class User {
 	private String email;
 
 	@Column(name="STATE", nullable=false)
-	private String state=State.ACTIVE.getState();
+	private String state= State.ACTIVE.getState();
 
 	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(name = "APP_USER_USER_PROFILE", 

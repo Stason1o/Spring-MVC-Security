@@ -1,4 +1,4 @@
-package com.sb.springsecurity.model;
+package com.sb.springsecurity.model.enums;
 
 public enum State {
 
@@ -9,7 +9,7 @@ public enum State {
 	
 	private String state;
 	
-	private State(final String state){
+	State(final String state){
 		this.state = state;
 	}
 	
