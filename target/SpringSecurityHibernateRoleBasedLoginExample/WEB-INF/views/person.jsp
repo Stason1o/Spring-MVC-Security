@@ -122,5 +122,7 @@
         </c:forEach>
     </table>
 </c:if>
+
+<a href="<c:url value="/logout" />" style="margin-top: 20px">Logout</a>
 </body>
 </html>

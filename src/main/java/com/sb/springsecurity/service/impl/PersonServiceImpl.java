@@ -14,12 +14,13 @@ import java.util.List;
 @Service("personService")
 public class PersonServiceImpl implements PersonService {
 
+    @Autowired
     private PersonDao personDao;
 
-    @Autowired
+    /*@Autowired
     public PersonServiceImpl(PersonDao personDao) {
         this.personDao = personDao;
-    }
+    }*/
 
     @Override
     @Transactional
@@ -43,7 +44,7 @@ public class PersonServiceImpl implements PersonService {
     @Override
     @Transactional
     public Person getPersonById(int id) {
-        System.out.println("In method PersonServiceImpl.getPersonById!!!!!! " + personDao.getPersonById(id));
+       // System.out.println("In method PersonServiceImpl.getPersonById!!!!!! " + personDao.getPersonById(id));
         return this.personDao.getPersonById(id);
     }
 

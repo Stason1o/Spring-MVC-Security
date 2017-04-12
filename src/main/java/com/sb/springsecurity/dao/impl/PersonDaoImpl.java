@@ -14,13 +14,13 @@ import java.util.List;
  */
 @Repository("personDao")
 public class PersonDaoImpl implements PersonDao {
-
+    @Autowired
     private SessionFactory sessionFactory;
 
-    @Autowired
-    public PersonDaoImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
+//    @Autowired
+//    public PersonDaoImpl(SessionFactory sessionFactory) {
+//        this.sessionFactory = sessionFactory;
+//    }
 
     public void addPerson(Person p) {
         System.out.println(p.getName());
@@ -46,7 +46,9 @@ public class PersonDaoImpl implements PersonDao {
     public Person getPersonById(int id) {
         System.out.println("In method PersonDaoImpl.getPersonById ----------------------------------");
         Session session = this.sessionFactory.getCurrentSession();
-        return (Person) session.load(Person.class, id);
+        Person person = (Person) session.get(Person.class, id);
+
+       return person;
     }
 
     public void removePerson(int id) {

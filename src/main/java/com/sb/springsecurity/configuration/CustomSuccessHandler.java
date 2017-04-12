@@ -33,7 +33,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
     }
     
     protected String determineTargetUrl(Authentication authentication) {
-    	String url="";
+    	String url;
     	
         Collection<? extends GrantedAuthority> authorities =  authentication.getAuthorities();
         
@@ -55,6 +55,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler{
     public void setRedirectStrategy(RedirectStrategy redirectStrategy) {
         this.redirectStrategy = redirectStrategy;
     }
+
     protected RedirectStrategy getRedirectStrategy() {
         return redirectStrategy;
     }

@@ -70,7 +70,6 @@ public class PersonController {
         return "person";
     }
 
-
     @RequestMapping(value = "/person", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
         model.addAttribute("person", new Person());
