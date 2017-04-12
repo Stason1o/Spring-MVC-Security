@@ -57,6 +57,8 @@
     <orderEntry type="library" name="Maven: javax.servlet:javax.servlet-api:3.1.0" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet.jsp:javax.servlet.jsp-api:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.projectlombok:lombok:1.16.12" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:validation-api:1.1.0.Final" level="project" />
   </component>
   <component name="sonarModuleSettings">
     <option name="localAnalysisScripName" value="&lt;PROJECT&gt;" />

@@ -23,6 +23,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/HibernateConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/SpringMvcInitializer.java">
           <value>
             <set />
@@ -58,7 +63,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Car.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CarEngine.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CarModel.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CarPiece.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/FuelType.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Person.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/TransmissionType.java">
           <value>
             <set />
           </value>
@@ -69,6 +104,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/UserProfile.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Year.java">
           <value>
             <set />
           </value>
