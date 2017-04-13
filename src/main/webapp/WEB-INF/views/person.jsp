@@ -41,7 +41,6 @@
             color: #333;
             background-color: #f0f0f0;
         }
-
     </style>
 </head>
 <body>
@@ -78,12 +77,142 @@
         </tr>
         <tr>
             <td>
-                <form:label path="country">
-                    <spring:message text="Country"/>
+                <form:label path="car">
+                    <spring:message text="Car mark:"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="country"/>
+                <form:input path="car"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="carModel">
+                    <spring:message text="Car Model"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="carModel"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="carYear">
+                    <spring:message text="Car Year"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="carYear"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="height">
+                    <spring:message text="Height"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="height"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="width">
+                    <spring:message text="Width"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="width"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="thickness">
+                    <spring:message text="Thickness"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="thickness"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="originalNumber">
+                    <spring:message text="IndentityNumber"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="originalNumber"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="airConditioner">
+                    <spring:message text="AirConditioner"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="airConditioner"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="engineName">
+                    <spring:message text="EngineName"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="engineName"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="engineVolume">
+                    <spring:message text="EngineVolume"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="engineVolume"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="transmissionType">
+                    <spring:message text="TransmissionType"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="transmissionType"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="fuelType">
+                    <spring:message text="FuelType"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="fuelType"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="inStock">
+                    <spring:message text="InStock"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="inStock"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="price">
+                    <spring:message text="Price"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="price"/>
             </td>
         </tr>
         <tr>
@@ -105,9 +234,22 @@
 <c:if test="${!empty listPersons}">
     <table class="tg">
         <tr>
-            <th width="80">Person ID</th>
-            <th width="120">Person Name</th>
-            <th width="120">Person Country</th>
+            <th width="30">Piece ID</th>
+            <th width="200">Piece Name</th>
+            <th width="30">Car Name</th>
+            <th width="30">Car Model</th>
+            <th width="60">Car Year</th>
+            <th width="50">Height</th>
+            <th width="50">Width</th>
+            <th width="20">Thickness</th>
+            <th width="120">Identity Number</th>
+            <th width="50">Air Conditioner</th>
+            <th width="60">Engine Name</th>
+            <th width="60">Engine Volume</th>
+            <th width="80">Transmission Type</th>
+            <th width="80">Fuel Type</th>
+            <th width="50">In Stock</th>
+            <th width="70">Price</th>
             <th width="60">Edit</th>
             <th width="60">Delete</th>
         </tr>
@@ -115,7 +257,20 @@
             <tr>
                 <td>${person.id}</td>
                 <td>${person.name}</td>
-                <td>${person.country}</td>
+                <td>${person.car}</td>
+                <td>${person.carModel}</td>
+                <td>${person.carYear}</td>
+                <td>${person.height}</td>
+                <td>${person.width}</td>
+                <td>${person.thickness}</td>
+                <td>${person.originalNumber}</td>
+                <td>${person.airConditioner}</td>
+                <td>${person.engineName}</td>
+                <td>${person.engineVolume}</td>
+                <td>${person.transmissionType}</td>
+                <td>${person.fuelType}</td>
+                <td>${person.inStock}</td>
+                <td>${person.price}</td>
                 <td><a href="<c:url value='/edit/${person.id}' />">Edit</a></td>
                 <td><a href="<c:url value='/remove/${person.id}' />">Delete</a></td>
             </tr>

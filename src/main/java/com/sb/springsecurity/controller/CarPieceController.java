@@ -1,7 +1,7 @@
 package com.sb.springsecurity.controller;
 
-import com.sb.springsecurity.model.Person;
-import com.sb.springsecurity.service.PersonService;
+import com.sb.springsecurity.model.CarPiece;
+import com.sb.springsecurity.service.CarPieceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.Authentication;
@@ -23,32 +23,32 @@ import javax.servlet.http.HttpServletResponse;
  * Created by sbogdanschi on 11/04/2017.
  */
 @Controller
-public class PersonController {
+public class CarPieceController {
 
-    private PersonService personService;
+    private CarPieceService carPieceService;
 
     @Autowired()
     @Qualifier(value = "personService")
-    public void setPersonService(PersonService personService) {
-        this.personService = personService;
+    public void setCarPieceService(CarPieceService carPieceService) {
+        this.carPieceService = carPieceService;
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String listPersons(Model model){
-        model.addAttribute("person", new Person());
-        model.addAttribute("listPersons", this.personService.listPersons());
+        model.addAttribute("person", new CarPiece());
+        model.addAttribute("listPersons", this.carPieceService.listPersons());
         return "person";
     }
 
     //For add and update person both
     @RequestMapping(value= "/person/add", method = RequestMethod.POST)
-    public String addPerson(@ModelAttribute("person") Person p){
+    public String addPerson(@ModelAttribute("person") CarPiece p){
         if(p.getId() == 0){
             //new person, add it
-            this.personService.addPerson(p);
+            this.carPieceService.addPerson(p);
         }else{
             //existing person, call update
-            this.personService.updatePerson(p);
+            this.carPieceService.updatePerson(p);
         }
 
         return "redirect:/";
@@ -56,24 +56,24 @@ public class PersonController {
 
     @RequestMapping("/remove/{id}")
     public String removePerson(@PathVariable("id") int id){
-        this.personService.removePerson(id);
+        this.carPieceService.removePerson(id);
         return "redirect:/";
     }
 
     @RequestMapping("/edit/{id}")
     public String editPerson(@PathVariable("id") int id, Model model){
         System.out.println("Inside method PersonController.editPerson");
-        model.addAttribute("person", this.personService.getPersonById(id));
+        model.addAttribute("person", this.carPieceService.getPersonById(id));
         System.out.println("Inside method PersonController.editPerson  AFTER getPersonById");
-        model.addAttribute("listPersons", this.personService.listPersons());
+        model.addAttribute("listPersons", this.carPieceService.listPersons());
         System.out.println("Inside method PersonController.editPerson  AFTER listPersons");
         return "person";
     }
 
     @RequestMapping(value = "/person", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
-        model.addAttribute("person", new Person());
-        model.addAttribute("listPersons", personService.listPersons());
+        model.addAttribute("person", new CarPiece());
+        model.addAttribute("listPersons", carPieceService.listPersons());
         return "person";
     }
 
