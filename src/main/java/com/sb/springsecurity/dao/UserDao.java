@@ -6,10 +6,10 @@ public interface UserDao {
 
     User findById(int id);
 
-    User findBySSO(String sso);
+    User findByUsername(String sso);
 
     void save(User user);
 
-    boolean isEmailInDatabase(String email);
+    User findByEmail(String email);
 }
 

@@ -22,15 +22,15 @@ public class User {
 //    @NotNull
 //    @NotEmpty
     @Column(name = "SSO_ID", unique = true, nullable = false)
-    private String ssoId;
+    private String username;
 
 //    @NotNull
 //    @NotEmpty
     @Column(name = "PASSWORD", nullable = false)
     private String password;
 
-//    @Transient
-//    private String confirmPassword;
+    @Transient
+    private String confirmPassword;
 //
 //    @NotNull
 //    @NotEmpty
@@ -56,12 +56,12 @@ public class User {
             joinColumns = {@JoinColumn(name = "USER_ID")},
             inverseJoinColumns = {@JoinColumn(name = "USER_PROFILE_ID")})
     private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
-//
-//    public String getConfirmPassword() {
-//        return confirmPassword;
-//    }
-//
-//    public void setConfirmPassword(String confirmPassword) {
-//        this.confirmPassword = confirmPassword;
-//    }
+
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+
+    public void setConfirmPassword(String confirmPassword) {
+        this.confirmPassword = confirmPassword;
+    }
 }

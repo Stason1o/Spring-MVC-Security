@@ -24,7 +24,6 @@ public class CarPieceDaoImpl implements CarPieceDao {
     }
 
     public void updatePerson(CarPiece p) {
-        // System.out.println(p.getName() + " " + p.getCountry() + "---------------------------------  ");
         Session session = this.sessionFactory.getCurrentSession();
 
         session.update(p);

@@ -6,10 +6,10 @@ public interface UserService {
 
     User findById(int id);
 
-    User findBySso(String sso);
+    User findByUsername(String username);
 
     void saveUser(User user);
 
-//    boolean isEmailInDatabase(String email);
+    User findByEmail(String email);
 
 }

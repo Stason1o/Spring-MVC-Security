@@ -19,11 +19,6 @@ public class CarPieceServiceImpl implements CarPieceService {
     @Autowired
     private CarPieceDao carPieceDao;
 
-    /*@Autowired
-    public CarPieceServiceImpl(CarPieceDao carPieceDao) {
-        this.carPieceDao = carPieceDao;
-    }*/
-
     @Override
     public void addPerson(CarPiece p) {
         this.carPieceDao.addPerson(p);
@@ -31,7 +26,6 @@ public class CarPieceServiceImpl implements CarPieceService {
 
     @Override
     public void updatePerson(CarPiece p) {
-        //System.out.println("In method CarPieceServiceImpl.updatePerson!!!!!! " + p.getName()  + " " + p.getCountry());
         this.carPieceDao.updatePerson(p);
     }
 
@@ -42,7 +36,6 @@ public class CarPieceServiceImpl implements CarPieceService {
 
     @Override
     public CarPiece getPersonById(int id) {
-        // System.out.println("In method CarPieceServiceImpl.getPersonById!!!!!! " + carPieceDao.getPersonById(id));
         return this.carPieceDao.getPersonById(id);
     }
 
