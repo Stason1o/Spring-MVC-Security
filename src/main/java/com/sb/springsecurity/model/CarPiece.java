@@ -8,7 +8,8 @@ import javax.persistence.*;
 /**
  * Created by sbogdanschi on 11/04/2017.
  */
-@Data @NoArgsConstructor
+@Data
+@NoArgsConstructor
 @Entity
 @Table(name = "car_pieces")
 public class CarPiece {
@@ -54,7 +55,7 @@ public class CarPiece {
     @Column(name = "transmission_type")
     private String transmissionType;
 
-    @Column(name="fuel_type")
+    @Column(name = "fuel_type")
     private String fuelType;
 
     @Column(name = "instock")

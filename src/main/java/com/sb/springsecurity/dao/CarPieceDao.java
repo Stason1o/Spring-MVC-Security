@@ -9,8 +9,12 @@ import java.util.List;
  */
 public interface CarPieceDao {
     void addPerson(CarPiece p);
+
     void updatePerson(CarPiece p);
+
     List<CarPiece> listPersons();
+
     CarPiece getPersonById(int id);
+
     void removePerson(int id);
 }

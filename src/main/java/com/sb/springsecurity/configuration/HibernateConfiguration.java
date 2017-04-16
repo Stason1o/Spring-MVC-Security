@@ -17,8 +17,8 @@ import java.util.Properties;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.sb.springsecurity.configuration" })
-@PropertySource(value = { "classpath:application.properties" })
+@ComponentScan({"com.sb.springsecurity.configuration"})
+@PropertySource(value = {"classpath:application.properties"})
 public class HibernateConfiguration {
 
     @Autowired
@@ -31,8 +31,8 @@ public class HibernateConfiguration {
         sessionFactory.setPackagesToScan("com.sb.springsecurity.model");
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
-     }
-	
+    }
+
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
@@ -48,15 +48,15 @@ public class HibernateConfiguration {
         properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
         properties.put("hibernate.format_sql", environment.getRequiredProperty("hibernate.format_sql"));
-        return properties;        
+        return properties;
     }
-    
-	@Bean
+
+    @Bean
     @Autowired
     public HibernateTransactionManager transactionManager(SessionFactory s) {
-       HibernateTransactionManager txManager = new HibernateTransactionManager();
-       txManager.setSessionFactory(s);
-       return txManager;
+        HibernateTransactionManager txManager = new HibernateTransactionManager();
+        txManager.setSessionFactory(s);
+        return txManager;
     }
 }
 

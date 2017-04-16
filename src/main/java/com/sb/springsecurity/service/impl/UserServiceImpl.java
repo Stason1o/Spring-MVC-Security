@@ -11,19 +11,29 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class UserServiceImpl implements UserService {
 
-	private final UserDao dao;
+    private final UserDao dao;
 
-	@Autowired
-	public UserServiceImpl(UserDao dao) {
-		this.dao = dao;
-	}
+    @Autowired
+    public UserServiceImpl(UserDao dao) {
+        this.dao = dao;
+    }
 
-	public User findById(int id) {
-		return dao.findById(id);
-	}
+    public User findById(int id) {
+        return dao.findById(id);
+    }
 
-	public User findBySso(String sso) {
-		return dao.findBySSO(sso);
-	}
+    public User findBySso(String sso) {
+        return dao.findBySSO(sso);
+    }
+
+    @Override
+    public void saveUser(User user) {
+        this.dao.save(user);
+    }
+
+//    @Override
+//    public boolean isEmailInDatabase(String email) {
+//        return dao.isEmailInDatabase(email);
+//    }
 
 }

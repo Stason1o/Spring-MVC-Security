@@ -2,29 +2,29 @@ package com.sb.springsecurity.model.enums;
 
 public enum State {
 
-	ACTIVE("Active"),
-	INACTIVE("Inactive"),
-	DELETED("Deleted"),
-	LOCKED("Locked");
-	
-	private String state;
-	
-	State(final String state){
-		this.state = state;
-	}
-	
-	public String getState(){
-		return this.state;
-	}
+    ACTIVE("Active"),
+    INACTIVE("Inactive"),
+    DELETED("Deleted"),
+    LOCKED("Locked");
 
-	@Override
-	public String toString(){
-		return this.state;
-	}
+    private String state;
 
-	public String getName(){
-		return this.name();
-	}
+    State(final String state) {
+        this.state = state;
+    }
+
+    public String getState() {
+        return this.state;
+    }
+
+    @Override
+    public String toString() {
+        return this.state;
+    }
+
+    public String getName() {
+        return this.name();
+    }
 
 
 }

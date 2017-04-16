@@ -14,18 +14,18 @@ import org.springframework.web.servlet.view.JstlView;
 @EnableWebMvc
 @ComponentScan(basePackages = "com.sb.springsecurity")
 public class HelloWorldConfiguration extends WebMvcConfigurerAdapter {
-	
-	@Bean(name="HelloWorld")
-	public ViewResolver viewResolver() {
-		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
-		viewResolver.setViewClass(JstlView.class);
-		viewResolver.setPrefix("/WEB-INF/views/");
-		viewResolver.setSuffix(".jsp");
 
-		return viewResolver;
-	}
+    @Bean(name = "HelloWorld")
+    public ViewResolver viewResolver() {
+        InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
+        viewResolver.setViewClass(JstlView.class);
+        viewResolver.setPrefix("/WEB-INF/views/");
+        viewResolver.setSuffix(".jsp");
 
-	/*
+        return viewResolver;
+    }
+
+    /*
      * Configure ResourceHandlers to serve static resources like CSS/ Javascript etc...
      *
      */

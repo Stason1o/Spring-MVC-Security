@@ -13,6 +13,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.6.RELEASE/spring-webmvc-4.1.6.RELEASE.jar!/org/springframework/web/servlet/view/InternalResourceView.class">
           <value>
             <set />
@@ -23,12 +28,22 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/CustomSuccessHandler.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/HelloWorldConfiguration.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/HibernateConfiguration.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/configuration/SecurityConfiguration.java">
           <value>
             <set />
           </value>
@@ -49,6 +64,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PersonController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/UserController.java">
           <value>
             <set />
           </value>
@@ -163,6 +183,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/UserService.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/impl/CarPieceServiceImpl.java">
           <value>
             <set />
@@ -178,7 +203,37 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/CustomEmailValidator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/PasswordMatchValidator.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/constraints/PasswordMatcher.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/constraints/ValidEmail.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/exceptions/EmailExistsException.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/resources/application.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp">
           <value>
             <set />
           </value>
@@ -189,6 +244,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp">
           <value>
             <set />
           </value>

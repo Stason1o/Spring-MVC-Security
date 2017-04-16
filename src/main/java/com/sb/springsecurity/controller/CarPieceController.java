@@ -62,11 +62,8 @@ public class CarPieceController {
 
     @RequestMapping("/edit/{id}")
     public String editPerson(@PathVariable("id") int id, Model model){
-        System.out.println("Inside method PersonController.editPerson");
         model.addAttribute("person", this.carPieceService.getPersonById(id));
-        System.out.println("Inside method PersonController.editPerson  AFTER getPersonById");
         model.addAttribute("listPersons", this.carPieceService.listPersons());
-        System.out.println("Inside method PersonController.editPerson  AFTER listPersons");
         return "person";
     }
 
@@ -82,18 +79,24 @@ public class CarPieceController {
         model.addAttribute("user", getPrincipal());
         return "dba";
     }
-    //
+
     @RequestMapping(value = "/Access_Denied", method = RequestMethod.GET)
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
         return "accessDenied";
     }
-    //
+
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String helloPage(ModelMap modelMap){
+        modelMap.addAttribute("user", getPrincipal());
+        return "welcome";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.GET)
     public String loginPage() {
         return "login";
     }
-    //
+
     @RequestMapping(value="/logout", method = RequestMethod.GET)
     public String logoutPage (HttpServletRequest request, HttpServletResponse response) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();

@@ -10,14 +10,18 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-@Data @NoArgsConstructor
-@Entity @Table(name="USER_PROFILE")
+
+@Data
+@NoArgsConstructor
+@Entity
+@Table(name = "USER_PROFILE")
 public class UserProfile {
 
-	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int id;	
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
 
-	@Column(name="TYPE", length=15, unique=true, nullable=false)
-	private String type = UserProfileType.USER.getUserProfileType();
+    @Column(name = "TYPE", length = 15, unique = true, nullable = false)
+    private String type = UserProfileType.USER.getUserProfileType();
 
 }

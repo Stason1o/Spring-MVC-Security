@@ -14,22 +14,17 @@ import java.util.List;
  */
 @Repository("personDao")
 public class CarPieceDaoImpl implements CarPieceDao {
+
     @Autowired
     private SessionFactory sessionFactory;
 
-//    @Autowired
-//    public CarPieceDaoImpl(SessionFactory sessionFactory) {
-//        this.sessionFactory = sessionFactory;
-//    }
-
     public void addPerson(CarPiece p) {
-        System.out.println(p.getName());
         Session session = this.sessionFactory.getCurrentSession();
         session.persist(p);
     }
 
     public void updatePerson(CarPiece p) {
-       // System.out.println(p.getName() + " " + p.getCountry() + "---------------------------------  ");
+        // System.out.println(p.getName() + " " + p.getCountry() + "---------------------------------  ");
         Session session = this.sessionFactory.getCurrentSession();
 
         session.update(p);
@@ -44,17 +39,16 @@ public class CarPieceDaoImpl implements CarPieceDao {
     }
 
     public CarPiece getPersonById(int id) {
-        System.out.println("In method CarPieceDaoImpl.getPersonById ----------------------------------");
         Session session = this.sessionFactory.getCurrentSession();
         CarPiece person = (CarPiece) session.get(CarPiece.class, id);
 
-       return person;
+        return person;
     }
 
     public void removePerson(int id) {
         Session session = this.sessionFactory.getCurrentSession();
         CarPiece person = (CarPiece) session.load(CarPiece.class, id);
-        if(person != null){
+        if (person != null) {
             session.delete(person);
         }
     }

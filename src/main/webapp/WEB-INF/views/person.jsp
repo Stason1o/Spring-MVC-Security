@@ -44,6 +44,7 @@
     </style>
 </head>
 <body>
+Dear <strong>${person}</strong>, Welcome to Page for Admin.
 <h1>
     Add a Person
 </h1>
