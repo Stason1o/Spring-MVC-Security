@@ -29,7 +29,7 @@
                     </c:if>
                     <div class="input-group input-sm">
                         <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
-                        <input type="text" class="form-control" id="username" name="ssoId" placeholder="Enter Username"
+                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username"
                                required>
                     </div>
                     <div class="input-group input-sm">
@@ -45,7 +45,7 @@
                     </div>
                 </form>
                 <div class="form-actions">
-                    <a href="<c:url value="/user/registration" />">Register new user</a>
+                    <a href="<c:url value="/user/registration" />" class="btn btn-block btn-primary btn-default">Register new user</a>
                 </div>
             </div>
         </div>

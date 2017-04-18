@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by sbogdanschi on 11/04/2017.
  */
-@Service("personService")
+@Service("carPieceService")
 @Transactional
 public class CarPieceServiceImpl implements CarPieceService {
 
@@ -20,27 +20,27 @@ public class CarPieceServiceImpl implements CarPieceService {
     private CarPieceDao carPieceDao;
 
     @Override
-    public void addPerson(CarPiece p) {
-        this.carPieceDao.addPerson(p);
+    public void addCarPiece(CarPiece p) {
+        this.carPieceDao.addCarPiece(p);
     }
 
     @Override
-    public void updatePerson(CarPiece p) {
-        this.carPieceDao.updatePerson(p);
+    public void updateCarPiece(CarPiece p) {
+        this.carPieceDao.updateCarPiece(p);
     }
 
     @Override
-    public List<CarPiece> listPersons() {
-        return this.carPieceDao.listPersons();
+    public List<CarPiece> listCarPieces() {
+        return this.carPieceDao.listCarPieces();
     }
 
     @Override
-    public CarPiece getPersonById(int id) {
-        return this.carPieceDao.getPersonById(id);
+    public CarPiece getCarPieceById(int id) {
+        return this.carPieceDao.gerCarPieceById(id);
     }
 
     @Override
-    public void removePerson(int id) {
-        this.carPieceDao.removePerson(id);
+    public void removeCarPiece(int id) {
+        this.carPieceDao.removeCarPiece(id);
     }
 }

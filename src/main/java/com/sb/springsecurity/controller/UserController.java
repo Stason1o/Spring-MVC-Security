@@ -33,7 +33,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/user/registration", method = RequestMethod.POST)
-    public String registerNewUser(@ModelAttribute("user") /*@Valid*/ User user, BindingResult result, Errors errors, Model model) {
+    public String registerNewUser(@ModelAttribute("user") User user, BindingResult result, Errors errors, Model model) {
         userValidator.validate(user, result);
         if(result.hasErrors()) {
             return "register";

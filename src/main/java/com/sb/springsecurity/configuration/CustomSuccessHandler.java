@@ -32,7 +32,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         redirectStrategy.sendRedirect(request, response, targetUrl);
     }
 
-    private String determineTargetUrl(Authentication authentication) {
+    protected String determineTargetUrl(Authentication authentication) {
         String url;
 
         Collection<? extends GrantedAuthority> authorities = authentication.getAuthorities();
@@ -42,7 +42,7 @@ public class CustomSuccessHandler extends SimpleUrlAuthenticationSuccessHandler 
         if (isDba(roles)) {
             url = "/db";
         } else if (isAdmin(roles)) {
-            url = "/person";
+            url = "/carPiece";
         } else if (isUser(roles)) {
             url = "/welcome";
         } else {

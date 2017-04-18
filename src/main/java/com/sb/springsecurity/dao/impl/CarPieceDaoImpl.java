@@ -12,24 +12,24 @@ import java.util.List;
 /**
  * Created by sbogdanschi on 11/04/2017.
  */
-@Repository("personDao")
+@Repository("carPieceDao")
 public class CarPieceDaoImpl implements CarPieceDao {
 
     @Autowired
     private SessionFactory sessionFactory;
 
-    public void addPerson(CarPiece p) {
+    public void addCarPiece(CarPiece carPiece) {
         Session session = this.sessionFactory.getCurrentSession();
-        session.persist(p);
+        session.persist(carPiece);
     }
 
-    public void updatePerson(CarPiece p) {
+    public void updateCarPiece(CarPiece carPiece) {
         Session session = this.sessionFactory.getCurrentSession();
 
-        session.update(p);
+        session.update(carPiece);
     }
 
-    public List<CarPiece> listPersons() {
+    public List<CarPiece> listCarPieces() {
         Session session = this.sessionFactory.getCurrentSession();
         List list = session.createCriteria(CarPiece.class).list();
         list.forEach(System.out::println);
@@ -37,18 +37,18 @@ public class CarPieceDaoImpl implements CarPieceDao {
         return list;
     }
 
-    public CarPiece getPersonById(int id) {
+    public CarPiece gerCarPieceById(int id) {
         Session session = this.sessionFactory.getCurrentSession();
-        CarPiece person = (CarPiece) session.get(CarPiece.class, id);
+        CarPiece carPiece = (CarPiece) session.get(CarPiece.class, id);
 
-        return person;
+        return carPiece;
     }
 
-    public void removePerson(int id) {
+    public void removeCarPiece(int id) {
         Session session = this.sessionFactory.getCurrentSession();
-        CarPiece person = (CarPiece) session.load(CarPiece.class, id);
-        if (person != null) {
-            session.delete(person);
+        CarPiece carPiece = (CarPiece) session.load(CarPiece.class, id);
+        if (carPiece != null) {
+            session.delete(carPiece);
         }
     }
 }

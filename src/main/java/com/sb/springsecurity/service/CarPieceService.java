@@ -8,13 +8,13 @@ import java.util.List;
  * Created by sbogdanschi on 11/04/2017.
  */
 public interface CarPieceService {
-    void addPerson(CarPiece p);
+    void addCarPiece(CarPiece p);
 
-    void updatePerson(CarPiece p);
+    void updateCarPiece(CarPiece p);
 
-    List<CarPiece> listPersons();
+    List<CarPiece> listCarPieces();
 
-    CarPiece getPersonById(int id);
+    CarPiece getCarPieceById(int id);
 
-    void removePerson(int id);
+    void removeCarPiece(int id);
 }

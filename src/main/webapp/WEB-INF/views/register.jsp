@@ -61,28 +61,12 @@
     </style>
 </head>
 <body>
-<h1>
-    Add a Person
-</h1>
+<h2 class="form-signin-heading">Create your account</h2>
 
 <c:url var="addAction" value="/user/registration"/>
 <%--<form:form method="POST" modelAttribute="userForm" class="form-signin" action="/user/registration">--%>
 <form:form action="${addAction}" commandName="user">
     <table>
-        <%--<c:if test="${!empty user.username}">--%>
-
-            <%--<tr>--%>
-                <%--<td>--%>
-                    <%--<form:label path="id">--%>
-                        <%--<spring:message text="ID"/>--%>
-                    <%--</form:label>--%>
-                <%--</td>--%>
-                <%--<td>--%>
-                    <%--<form:input path="id" readonly="true" size="8" disabled="true"/>--%>
-                    <%--<form:hidden path="id"/>--%>
-                <%--</td>--%>
-            <%--</tr>--%>
-        <%--</c:if>--%>
         <tr>
             <td>
                 <spring:bind path="firstName">
@@ -91,13 +75,7 @@
                         <form:errors path="firstName"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="firstName">--%>
-                    <%--<spring:message text="FirstName"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="firstName"/>--%>
-            <%--</td>--%>
         </tr>
         <tr>
             <td>
@@ -107,13 +85,7 @@
                         <form:errors path="lastName"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="lastName">--%>
-                    <%--<spring:message text="LastName:"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="lastName"/>--%>
-            <%--</td>--%>
         </tr>
         <tr>
             <td>
@@ -123,15 +95,8 @@
                         <form:errors path="email"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="email">--%>
-                    <%--<spring:message text="Email"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="email"/>--%>
-            <%--</td>--%>
         </tr>
-        <%--<h2 class="form-signin-heading">Create your account</h2>--%>
 
         <tr>
             <td>
@@ -141,13 +106,7 @@
                         <form:errors path="username"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="username">--%>
-                    <%--<spring:message text="Username"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="username"/>--%>
-            <%--</td>--%>
         </tr>
 
         <tr>
@@ -158,13 +117,7 @@
                         <form:errors path="password"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="password">--%>
-                    <%--<spring:message text="Password"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="password"/>--%>
-            <%--</td>--%>
         </tr>
 
         <tr>
@@ -176,13 +129,7 @@
                         <form:errors path="confirmPassword"/>
                     </div>
                 </spring:bind>
-                <%--<form:label path="confirmPassword">--%>
-                    <%--<spring:message text="ConfirmPassword"/>--%>
-                <%--</form:label>--%>
             </td>
-            <%--<td>--%>
-                <%--<form:input path="confirmPassword"/>--%>
-            <%--</td>--%>
         </tr>
         <tr>
             <td colspan="2">

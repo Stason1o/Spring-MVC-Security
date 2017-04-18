@@ -28,50 +28,52 @@ public class CarPieceController {
     private CarPieceService carPieceService;
 
     @Autowired()
-    @Qualifier(value = "personService")
+    @Qualifier(value = "carPieceService")
     public void setCarPieceService(CarPieceService carPieceService) {
         this.carPieceService = carPieceService;
     }
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String listPersons(Model model){
-        model.addAttribute("person", new CarPiece());
-        model.addAttribute("listPersons", this.carPieceService.listPersons());
-        return "person";
+    public String listCarPieces(Model model){
+        model.addAttribute("carPiece", new CarPiece());
+        model.addAttribute("listCarPieces", this.carPieceService.listCarPieces());
+        return "carPiece";
     }
 
     //For add and update person both
-    @RequestMapping(value= "/person/add", method = RequestMethod.POST)
-    public String addPerson(@ModelAttribute("person") CarPiece p){
-        if(p.getId() == 0){
+    @RequestMapping(value= "/carPiece", method = RequestMethod.POST)
+    public String addCarPiece(@ModelAttribute("carPiece") CarPiece carPiece){
+        if(carPiece.getId() == 0){
             //new person, add it
-            this.carPieceService.addPerson(p);
+            this.carPieceService.addCarPiece(carPiece);
         }else{
             //existing person, call update
-            this.carPieceService.updatePerson(p);
+            this.carPieceService.updateCarPiece(carPiece);
         }
 
         return "redirect:/";
     }
 
     @RequestMapping("/remove/{id}")
-    public String removePerson(@PathVariable("id") int id){
-        this.carPieceService.removePerson(id);
+    public String removeCarPiece(@PathVariable("id") int id){
+        this.carPieceService.removeCarPiece(id);
         return "redirect:/";
     }
 
     @RequestMapping("/edit/{id}")
-    public String editPerson(@PathVariable("id") int id, Model model){
-        model.addAttribute("person", this.carPieceService.getPersonById(id));
-        model.addAttribute("listPersons", this.carPieceService.listPersons());
-        return "person";
+    public String editCarPiece(@PathVariable("id") int id, Model model){
+        model.addAttribute("user", getPrincipal());
+        model.addAttribute("carPiece", this.carPieceService.getCarPieceById(id));
+        model.addAttribute("listCarPieces", this.carPieceService.listCarPieces());
+        return "carPiece";
     }
 
-    @RequestMapping(value = "/person", method = RequestMethod.GET)
+    @RequestMapping(value = "/carPiece", method = RequestMethod.GET)
     public String adminPage(ModelMap model) {
-        model.addAttribute("person", new CarPiece());
-        model.addAttribute("listPersons", carPieceService.listPersons());
-        return "person";
+        model.addAttribute("user", getPrincipal());
+        model.addAttribute("carPiece", new CarPiece());
+        model.addAttribute("listCarPieces", carPieceService.listCarPieces());
+        return "carPiece";
     }
 
     @RequestMapping(value = "/db", method = RequestMethod.GET)
