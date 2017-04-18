@@ -29,7 +29,7 @@ public class CarPiece {
     private String carModel;
 
     @Column(name = "car_year")
-    private String carYear;
+    private Integer carYear;
 
     @Column(name = "height")
     private Integer height;
@@ -59,9 +59,9 @@ public class CarPiece {
     private String fuelType;
 
     @Column(name = "instock")
-    private int inStock;
+    private Integer inStock;
 
     @Column(name = "price")
-    private double price;
+    private Double price;
 
 }

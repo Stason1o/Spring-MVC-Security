@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SpringSecurityHibernateRoleBasedLoginExample.iml" filepath="$PROJECT_DIR$/SpringSecurityHibernateRoleBasedLoginExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringSecurityHibernateMVCWebsite.iml" filepath="$PROJECT_DIR$/SpringSecurityHibernateMVCWebsite.iml" />
     </modules>
   </component>
 </project>

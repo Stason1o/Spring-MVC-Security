@@ -86,6 +86,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="name">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="name" class="form-control" placeholder="Name" autofocus="true"/>
+                        <form:errors path="name"/>
                     </div>
                 </spring:bind>
             </div>
@@ -93,6 +94,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="car">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="car" class="form-control" placeholder="Car mark" autofocus="true"/>
+                        <form:errors path="car"/>
                     </div>
                 </spring:bind>
             </div>
@@ -100,6 +102,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="carModel">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="carModel" class="form-control" placeholder="Car Model" autofocus="true"/>
+                        <form:errors path="carModel"/>
                     </div>
                 </spring:bind>
             </td>
@@ -107,6 +110,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="carYear">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="carYear" class="form-control" placeholder="Car Year" autofocus="true"/>
+                        <form:errors path="carYear"/>
                     </div>
                 </spring:bind>
             </div>
@@ -135,6 +139,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="originalNumber">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="originalNumber" class="form-control" placeholder="Original Number" autofocus="true"/>
+                        <form:errors path="originalNumber"/>
                     </div>
                 </spring:bind>
             </div>
@@ -151,6 +156,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="engineName">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="engineName" class="form-control" placeholder="Engine Name" autofocus="true"/>
+                        <form:errors path="engineName"/>
                     </div>
                 </spring:bind>
             </div>
@@ -158,6 +164,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="engineVolume">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="engineVolume" class="form-control" placeholder="Engine Volume" autofocus="true"/>
+                        <form:errors path="engineVolume"/>
                     </div>
                 </spring:bind>
             </div>
@@ -165,6 +172,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="transmissionType">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="transmissionType" class="form-control" placeholder="Transmission Type" autofocus="true"/>
+                        <form:errors path="transmissionType"/>
                     </div>
                 </spring:bind>
             </div>
@@ -172,6 +180,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="fuelType">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="fuelType" class="form-control" placeholder="Fuel Type" autofocus="true"/>
+                        <form:errors path="fuelType"/>
                     </div>
                 </spring:bind>
             </div>
@@ -179,6 +188,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="inStock">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="inStock" class="form-control" placeholder="In Stock" autofocus="true"/>
+                        <form:errors path="inStock"/>
                     </div>
                 </spring:bind>
             </div>
@@ -186,6 +196,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <spring:bind path="price">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="price" class="form-control" placeholder="Price" autofocus="true"/>
+                        <form:errors path="price"/>
                     </div>
                 </spring:bind>
             </div>
@@ -194,11 +205,11 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
             <td colspan="2">
                 <c:if test="${!empty carPiece.name}">
                     <input type="submit"
-                           value="<spring:message text="Edit Person"/>"/>
+                           value="<spring:message text="Edit CarPiece"/>"/>
                 </c:if>
                 <c:if test="${empty carPiece.name}">
                     <input type="submit"
-                           value="<spring:message text="Add Person"/>"/>
+                           value="<spring:message text="Add CarPiece"/>"/>
                 </c:if>
             </td>
         </br>
@@ -231,58 +242,60 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
     </thead>
 </table>
 
-
-<c:if test="${!empty listCarPieces}">
-    <table class="tg" id="myTable">
-        <tr>
-            <th width="30">Piece ID</th>
-            <th width="200">Piece Name</th>
-            <th width="30">Car Name</th>
-            <th width="30">Car Model</th>
-            <th width="60">Car Year</th>
-            <th width="50">Height</th>
-            <th width="50">Width</th>
-            <th width="20">Thickness</th>
-            <th width="120">Identity Number</th>
-            <th width="50">Air Conditioner</th>
-            <th width="60">Engine Name</th>
-            <th width="60">Engine Volume</th>
-            <th width="80">Transmission Type</th>
-            <th width="80">Fuel Type</th>
-            <th width="50">In Stock</th>
-            <th width="70">Price</th>
-            <th width="60">Edit</th>
-            <th width="60">Delete</th>
-        </tr>
-        <c:forEach items="${listCarPieces}" var="carPiece">
-            <tr class = "piece_row"
-                data-piece_name="${carPiece.name}"
-                data-car_name="${carPiece.car}"
-                data-car_model="${carPiece.carModel}"
-                data-car_year="${carPiece.carYear}"
-                data-id_num="${carPiece.originalNumber}">
-                <td>${carPiece.id}</td>
-                <td>${carPiece.name}</td>
-                <td>${carPiece.car}</td>
-                <td>${carPiece.carModel}</td>
-                <td>${carPiece.carYear}</td>
-                <td>${carPiece.height}</td>
-                <td>${carPiece.width}</td>
-                <td>${carPiece.thickness}</td>
-                <td>${carPiece.originalNumber}</td>
-                <td>${carPiece.airConditioner}</td>
-                <td>${carPiece.engineName}</td>
-                <td>${carPiece.engineVolume}</td>
-                <td>${carPiece.transmissionType}</td>
-                <td>${carPiece.fuelType}</td>
-                <td>${carPiece.inStock}</td>
-                <td>${carPiece.price}</td>
-                <td><a href="<c:url value='/edit/${carPiece.id}' />">Edit</a></td>
-                <td><a href="<c:url value='/remove/${carPiece.id}' />">Delete</a></td>
+<form:form action="${addAction}" commandName="carPiece">
+    <c:if test="${!empty listCarPieces}">
+        <table class="tg" id="myTable">
+            <tr>
+                <th width="30">Piece ID</th>
+                <th width="200">Piece Name</th>
+                <th width="30">Car Name</th>
+                <th width="30">Car Model</th>
+                <th width="60">Car Year</th>
+                <th width="50">Height</th>
+                <th width="50">Width</th>
+                <th width="20">Thickness</th>
+                <th width="120">Identity Number</th>
+                <th width="50">Air Conditioner</th>
+                <th width="60">Engine Name</th>
+                <th width="60">Engine Volume</th>
+                <th width="80">Transmission Type</th>
+                <th width="80">Fuel Type</th>
+                <th width="50">In Stock</th>
+                <th width="70">Price</th>
+                <th width="60">Edit</th>
+                <th width="60">Delete</th>
             </tr>
-        </c:forEach>
-    </table>
-</c:if>
+            <c:forEach items="${listCarPieces}" var="carPiece">
+                <tr class = "piece_row"
+                    data-piece_name="${carPiece.name}"
+                    data-car_name="${carPiece.car}"
+                    data-car_model="${carPiece.carModel}"
+                    data-car_year="${carPiece.carYear}"
+                    data-id_num="${carPiece.originalNumber}">
+                    <td>${carPiece.id}</td>
+                    <td>${carPiece.name}</td>
+                    <td>${carPiece.car}</td>
+                    <td>${carPiece.carModel}</td>
+                    <td>${carPiece.carYear}</td>
+                    <td>${carPiece.height}</td>
+                    <td>${carPiece.width}</td>
+                    <td>${carPiece.thickness}</td>
+                    <td>${carPiece.originalNumber}</td>
+                    <td>${carPiece.airConditioner}</td>
+                    <td>${carPiece.engineName}</td>
+                    <td>${carPiece.engineVolume}</td>
+                    <td>${carPiece.transmissionType}</td>
+                    <td>${carPiece.fuelType}</td>
+                    <td>${carPiece.inStock}</td>
+                    <td>${carPiece.price}</td>
+                    <td><a href="<c:url value='/edit/${carPiece.id}' />">Edit</a></td>
+                    <td><a href="<c:url value='/remove/${carPiece.id}' />">Delete</a></td>
+                </tr>
+            </c:forEach>
+        </table>
+    </c:if>
+    <input type="submit" value="<spring:message text="Load data from database"/>"/>
+</form:form>
 
 <a href="<c:url value="/logout" />" style="margin-top: 20px">Logout</a>
 

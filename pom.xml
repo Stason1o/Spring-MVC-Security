@@ -2,12 +2,12 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.websystique.springsecurity</groupId>
-  <artifactId>SpringSecurityHibernateRoleBasedLoginExample</artifactId>
+  <groupId>com.sb.springsecurity</groupId>
+  <artifactId>SpringSecurityHibernateMVCWebsite</artifactId>
   <version>1.0.0</version>
   <packaging>war</packaging>
 
-  <name>SpringSecurityHibernateRoleBasedLoginExample</name>
+  <name>SpringSecurityHibernateMVCWebsite</name>
   
   	<properties>
 		<springframework.version>4.1.6.RELEASE</springframework.version>
@@ -113,7 +113,7 @@
 					<version>2.4</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>SpringSecurityHibernateRoleBasedLoginExample</warName>
+						<warName>SpringSecurityHibernateMVCWebsite</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
@@ -129,6 +129,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>SpringSecurityHibernateRoleBasedLoginExample</finalName>
+		<finalName>SpringSecurityHibernateMVCWebsite</finalName>
 	</build>
 </project>

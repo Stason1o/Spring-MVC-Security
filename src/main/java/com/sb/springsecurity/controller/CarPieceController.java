@@ -2,8 +2,8 @@ package com.sb.springsecurity.controller;
 
 import com.sb.springsecurity.model.CarPiece;
 import com.sb.springsecurity.service.CarPieceService;
+import com.sb.springsecurity.validators.CarPieceValidator;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +11,8 @@ import org.springframework.security.web.authentication.logout.SecurityContextLog
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,24 +27,27 @@ import javax.servlet.http.HttpServletResponse;
 @Controller
 public class CarPieceController {
 
+    @Autowired
     private CarPieceService carPieceService;
-
-    @Autowired()
-    @Qualifier(value = "carPieceService")
-    public void setCarPieceService(CarPieceService carPieceService) {
-        this.carPieceService = carPieceService;
-    }
+    @Autowired
+    private CarPieceValidator carPieceValidator;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String listCarPieces(Model model){
+        model.addAttribute("user", getPrincipal());
         model.addAttribute("carPiece", new CarPiece());
         model.addAttribute("listCarPieces", this.carPieceService.listCarPieces());
-        return "carPiece";
+        return "welcome";
     }
 
     //For add and update person both
     @RequestMapping(value= "/carPiece", method = RequestMethod.POST)
-    public String addCarPiece(@ModelAttribute("carPiece") CarPiece carPiece){
+    public String addCarPiece(@ModelAttribute("carPiece") CarPiece carPiece, BindingResult result, Errors errors, Model model){
+        carPieceValidator.validate(carPiece, errors);
+        if(result.hasErrors()){
+            return "carPiece";
+        }
+
         if(carPiece.getId() == 0){
             //new person, add it
             this.carPieceService.addCarPiece(carPiece);
@@ -51,13 +56,13 @@ public class CarPieceController {
             this.carPieceService.updateCarPiece(carPiece);
         }
 
-        return "redirect:/";
+        return "redirect:/carPiece";
     }
 
     @RequestMapping("/remove/{id}")
     public String removeCarPiece(@PathVariable("id") int id){
         this.carPieceService.removeCarPiece(id);
-        return "redirect:/";
+        return "redirect:/carPiece";
     }
 
     @RequestMapping("/edit/{id}")
