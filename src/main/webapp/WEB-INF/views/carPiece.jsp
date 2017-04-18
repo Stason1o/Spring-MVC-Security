@@ -41,20 +41,6 @@
             color: #333;
             background-color: #f0f0f0;
         }
-        /*.outer_table {*/
-            /*display:block;*/
-            /*color:red;*/
-            /*width:1000px;*/
-            /*height:100px;*/
-        /*}*/
-
-        /*.inner_column {*/
-            /*display:block;*/
-            /*color: blue;*/
-            /*width: 120px;*/
-            /*height: 100px;*/
-            /*float:left;*/
-        /*}*/
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
@@ -242,7 +228,6 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
     </thead>
 </table>
 
-<form:form action="${addAction}" commandName="carPiece">
     <c:if test="${!empty listCarPieces}">
         <table class="tg" id="myTable">
             <tr>
@@ -262,6 +247,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <th width="80">Fuel Type</th>
                 <th width="50">In Stock</th>
                 <th width="70">Price</th>
+                <th width="100">Photo</th>
                 <th width="60">Edit</th>
                 <th width="60">Delete</th>
             </tr>
@@ -288,14 +274,13 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     <td>${carPiece.fuelType}</td>
                     <td>${carPiece.inStock}</td>
                     <td>${carPiece.price}</td>
+                    <td>${carPiece.photo}</td>
                     <td><a href="<c:url value='/edit/${carPiece.id}' />">Edit</a></td>
                     <td><a href="<c:url value='/remove/${carPiece.id}' />">Delete</a></td>
                 </tr>
             </c:forEach>
         </table>
     </c:if>
-    <input type="submit" value="<spring:message text="Load data from database"/>"/>
-</form:form>
 
 <a href="<c:url value="/logout" />" style="margin-top: 20px">Logout</a>
 
@@ -338,73 +323,6 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
 
         bindFilters();
     })();
-
-//    function filterByColumn(inputId, inputColumn) {
-//        // Declare variables
-//        var input, filter, table, tr, td, i;
-//        input = document.getElementById(inputId);
-//        filter = input.value.toUpperCase();
-//        table = document.getElementById("myTable");
-//        tr = table.getElementsByTagName("tr");
-//
-//
-//        // Loop through all table rows, and hide those who don't match the search query
-//        for (i = 0; i < tr.length; i++) {
-//            td = tr[i].getElementsByTagName("td")[inputColumn];
-//            if (td) {
-//                if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
-//                    //tr[i].style.display = "";
-//                } else {
-//                    tr[i].style.display = "none";
-//                }
-//            }
-//        }
-//    }
-//
-//    function filterByPieceName(inputId, columnNumber) {
-//        // Declare variables
-//        var input, filter, table, tr, td, i;
-//        input = document.getElementById(inputId);
-//        filter = input.value.toUpperCase();
-//        table = document.getElementById("myTable");
-//        tr = table.getElementsByTagName("tr");
-//
-//
-//        // Loop through all table rows, and hide those who don't match the search query
-//        for (i = 0; i < tr.length; i++) {
-//            td = tr[i].getElementsByTagName("td")[columnNumber];
-//            if (td) {
-//                if (td.innerHTML.toUpperCase().indexOf(filter) > -1 ) {
-//                    tr[i].style.display = "";
-//                } else if (input.innerHTML != "") {
-//                    tr[i].style.display = "none";
-//                }
-//            }
-//        }
-//    }
-
-//    function filterByPieceName(inputId, columnNumber) {
-//        // Declare variables
-//        var input, filter, table, tr, td, i;
-//        input = document.getElementById(inputId);
-//        filter = input.value.toUpperCase();
-//        table = document.getElementById("myTable");
-//        tr = table.getElementsByTagName("tr");
-//
-//
-//        // Loop through all table rows, and hide those who don't match the search query
-//        for (i = 0; i < tr.length; i++) {
-//            td = tr[i].getElementsByTagName("td")[columnNumber];
-//            if (td) {
-//                if (td.innerHTML.toUpperCase().indexOf(filter) > -1 && input !== 'undefined') {
-//                    tr[i].style.display = "";
-//                } else
-//                {
-//                    tr[i].style.display = "none";
-//                }
-//            }
-//        }
-//    }
 
 </script>
 </body>

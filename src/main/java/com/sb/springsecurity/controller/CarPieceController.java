@@ -9,7 +9,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
@@ -29,30 +28,32 @@ public class CarPieceController {
 
     @Autowired
     private CarPieceService carPieceService;
+
     @Autowired
     private CarPieceValidator carPieceValidator;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String listCarPieces(Model model){
-        model.addAttribute("user", getPrincipal());
-        model.addAttribute("carPiece", new CarPiece());
-        model.addAttribute("listCarPieces", this.carPieceService.listCarPieces());
+    public String redirectToHelloPage(ModelMap modelMap){
+        return "redirect:/welcome";
+    }
+
+    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    public String helloPage(ModelMap modelMap){
+        modelMap.addAttribute("user", getPrincipal());
         return "welcome";
     }
 
     //For add and update person both
     @RequestMapping(value= "/carPiece", method = RequestMethod.POST)
-    public String addCarPiece(@ModelAttribute("carPiece") CarPiece carPiece, BindingResult result, Errors errors, Model model){
+    public String addCarPiece(@ModelAttribute("carPiece") CarPiece carPiece, BindingResult result, Errors errors, ModelMap modelMap){
         carPieceValidator.validate(carPiece, errors);
         if(result.hasErrors()){
             return "carPiece";
         }
 
         if(carPiece.getId() == 0){
-            //new person, add it
             this.carPieceService.addCarPiece(carPiece);
         }else{
-            //existing person, call update
             this.carPieceService.updateCarPiece(carPiece);
         }
 
@@ -66,7 +67,7 @@ public class CarPieceController {
     }
 
     @RequestMapping("/edit/{id}")
-    public String editCarPiece(@PathVariable("id") int id, Model model){
+    public String editCarPiece(@PathVariable("id") int id, ModelMap model){
         model.addAttribute("user", getPrincipal());
         model.addAttribute("carPiece", this.carPieceService.getCarPieceById(id));
         model.addAttribute("listCarPieces", this.carPieceService.listCarPieces());
@@ -74,10 +75,10 @@ public class CarPieceController {
     }
 
     @RequestMapping(value = "/carPiece", method = RequestMethod.GET)
-    public String adminPage(ModelMap model) {
-        model.addAttribute("user", getPrincipal());
-        model.addAttribute("carPiece", new CarPiece());
-        model.addAttribute("listCarPieces", carPieceService.listCarPieces());
+    public String adminPage(ModelMap modelMap) {
+        modelMap.addAttribute("user", getPrincipal());
+        modelMap.addAttribute("carPiece", new CarPiece());
+        modelMap.addAttribute("listCarPieces", carPieceService.listCarPieces());
         return "carPiece";
     }
 
@@ -91,12 +92,6 @@ public class CarPieceController {
     public String accessDeniedPage(ModelMap model) {
         model.addAttribute("user", getPrincipal());
         return "accessDenied";
-    }
-
-    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
-    public String helloPage(ModelMap modelMap){
-        modelMap.addAttribute("user", getPrincipal());
-        return "welcome";
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.GET)

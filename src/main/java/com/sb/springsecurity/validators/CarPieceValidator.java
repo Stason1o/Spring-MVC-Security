@@ -44,25 +44,19 @@ public class CarPieceValidator implements Validator {
 
         if (!(carPiece.getTransmissionType().equals(MANUAL) ||
                 carPiece.getTransmissionType().equals(AUTOMATIC) ||
-                carPiece.getTransmissionType() == null)) {
+                carPiece.getTransmissionType().equals(""))) {
             errors.rejectValue("transmissionType", "Wrong.carPieceForm.transmissionType");
         }
 
         if (!(carPiece.getFuelType().equals(BENZINE) ||
                 carPiece.getFuelType().equals(DIESEL) ||
                 carPiece.getFuelType().equals(GAZ) ||
-                carPiece.getFuelType() == null)) {
+                carPiece.getFuelType().equals(""))) {
             errors.rejectValue("fuelType", "Wrong.carPieceFrom.fuelType");
         }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "inStock", "Required");
-        if (carPiece.getInStock() == null) {
-            errors.rejectValue("inStock", "Required");
-        }
 
         ValidationUtils.rejectIfEmptyOrWhitespace(errors, "price", "Required");
-        if (carPiece.getPrice() == null) {
-            errors.rejectValue("price", "Required");
-        }
     }
 }
