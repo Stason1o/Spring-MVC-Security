@@ -186,6 +186,13 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     </div>
                 </spring:bind>
             </div>
+            <div class="inner_column" >
+                <spring:bind path="photo">
+                    <div class="form-group ${status.error ? 'has-error' : ''}">
+                        <form:input type="text" path="photo" class="form-control" placeholder="Photo" autofocus="true"/>
+                    </div>
+                </spring:bind>
+            </div>
         </br>
         <br>
             <td colspan="2">
@@ -274,7 +281,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     <td>${carPiece.fuelType}</td>
                     <td>${carPiece.inStock}</td>
                     <td>${carPiece.price}</td>
-                    <td>${carPiece.photo}</td>
+                    <td><img src="${carPiece.photo}" style="width:100px;height:100px"></td>
                     <td><a href="<c:url value='/edit/${carPiece.id}' />">Edit</a></td>
                     <td><a href="<c:url value='/remove/${carPiece.id}' />">Delete</a></td>
                 </tr>

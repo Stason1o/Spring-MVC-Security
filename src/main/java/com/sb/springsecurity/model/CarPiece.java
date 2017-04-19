@@ -64,8 +64,7 @@ public class CarPiece {
     @Column(name = "price")
     private Double price;
 
-    @Lob @Basic
     @Column(name = "photo")
-    private Byte[] photo;
+    private String photo;
 
 }
