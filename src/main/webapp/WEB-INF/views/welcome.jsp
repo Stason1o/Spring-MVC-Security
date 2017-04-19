@@ -1,5 +1,7 @@
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html class="full" lang="en">
 <head>
 	<meta charset="utf-8">
@@ -36,23 +38,32 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#">Main Page</a>
+				<a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav">
 					<li>
-						<a href="#">About</a>
+						<a href="<c:url value="/about" />">About</a>
 					</li>
 					<li>
-						<a href="#">Shop</a>
+						<a href="<c:url value="/shop" />">Shop</a>
 					</li>
 					<li>
-						<a href="#">Contact</a>
+						<a href="<c:url value="/contact" />">Contact</a>
 					</li>
-					<li>
-						<a href="<c:url value="/logout" />">Logout</a>
-					</li>
+					<sec:authorize var="loggedIn" access="isAuthenticated()" />
+					<c:if test="${loggedIn}">
+						<li>
+							<a href="<c:url value="/logout" />">Logout</a>
+						</li>
+					</c:if>
+					<sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')" />
+					<c:if test="${adminRole}">
+						<li>
+							<a href="<c:url value="/carPiece" />">Edit database list</a>
+						</li>
+					</c:if>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->

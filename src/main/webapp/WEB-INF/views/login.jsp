@@ -25,7 +25,7 @@
 
 
     <%--<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"/>--%>
-    <link href="<c:url value='/static/css/app.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/app.css' />" rel="stylesheet"/>
     <%--<link rel="stylesheet" type="text/css"--%>
           <%--href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>--%>
 </head>
@@ -43,19 +43,19 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Main Page</a>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#">About</a>
+                    <a href="<c:url value="/about" />">About</a>
                 </li>
                 <li>
-                    <a href="#">Shop</a>
+                    <a href="<c:url value="/shop" />">Shop</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="<c:url value="/contact" />">Contact</a>
                 </li>
             </ul>
         </div>

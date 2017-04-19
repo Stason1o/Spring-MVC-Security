@@ -1,0 +1,61 @@
+
+
+.carPieceText{
+    margin-left: 40%;
+
+}
+
+.form-group {
+    width: 250px;
+    /*float: left;*/
+    padding-bottom: 30px;
+}
+
+.form-group.has-error{
+    margin: 0px;
+    padding: 0px;
+}
+
+.inner_column{
+    display: block;
+    padding: 0px 20px 0px 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 70px;
+    width: 250px;
+    float: left;
+}
+
+.btn.btn-block.btn-primary.btn-default{
+    width: 200px;
+    margin: auto;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-color: #ccc;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #fff;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+}

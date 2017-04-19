@@ -9,50 +9,71 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false" %>
-<html>
+<html class="full">
 <head>
-    <title>Person Page</title>
-    <style type="text/css">
-        .tg {
-            border-collapse: collapse;
-            border-spacing: 0;
-            border-color: #ccc;
-        }
+    <title>Edit Car Piece Page</title>
 
-        .tg td {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            padding: 10px 5px;
-            overflow: hidden;
-            word-break: normal;
-            border: 1px solid #ccc;
-            color: #333;
-            background-color: #fff;
-        }
+    <link href="<c:url value='/resources/css/bootstrap.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/the-big-picture.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/carPiece.css' />" rel="stylesheet"/>
 
-        .tg th {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            padding: 10px 5px;
-            overflow: hidden;
-            word-break: normal;
-            border: 1px solid #ccc;
-            color: #333;
-            background-color: #f0f0f0;
-        }
-    </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 </head>
 <body>
-Dear <strong>${user}</strong>, Welcome to Page for Admin.
-<h1>
-    Add a Car Piece
-</h1>
+<div class="carPieceText">
+    <h3 >
+        Add a Car Piece
+    </h3>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="<c:url value="/about" />">About</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/shop" />">Shop</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/contact" />">Contact</a>
+                </li>
+                <sec:authorize var="loggedIn" access="isAuthenticated()" />
+                <c:if test="${loggedIn}">
+                    <li>
+                        <a href="<c:url value="/logout" />">Logout</a>
+                    </li>
+                </c:if>
+                <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')" />
+                <c:if test="${adminRole}">
+                    <li>
+                        <a href="<c:url value="/carPiece" />">Edit database list</a>
+                    </li>
+                </c:if>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
 <c:url var="addAction" value="/carPiece"/>
 
 <form:form action="${addAction}" commandName="carPiece">
+<div class="container">
     <div class="outer_table">
         <c:if test="${!empty carPiece.name}">
             <tr>
@@ -67,7 +88,6 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 </td>
             </tr>
         </c:if>
-        <br>
             <div class="inner_column" >
                 <spring:bind path="name">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
@@ -84,14 +104,14 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     </div>
                 </spring:bind>
             </div>
-            <td width="150">
+            <div class="inner_column" >
                 <spring:bind path="carModel">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
                         <form:input type="text" path="carModel" class="form-control" placeholder="Car Model" autofocus="true"/>
                         <form:errors path="carModel"/>
                     </div>
                 </spring:bind>
-            </td>
+            </div>
             <div class="inner_column" >
                 <spring:bind path="carYear">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
@@ -129,8 +149,6 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     </div>
                 </spring:bind>
             </div>
-        </br>
-        <br>
             <div class="inner_column" >
                 <spring:bind path="airConditioner">
                     <div class="form-group ${status.error ? 'has-error' : ''}">
@@ -193,26 +211,25 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     </div>
                 </spring:bind>
             </div>
-        </br>
-        <br>
+
             <td colspan="2">
                 <c:if test="${!empty carPiece.name}">
                     <input type="submit"
                            value="<spring:message text="Edit CarPiece"/>"/>
                 </c:if>
                 <c:if test="${empty carPiece.name}">
-                    <input type="submit"
+                    <input type="submit" class="btn btn-block btn-primary btn-default"
                            value="<spring:message text="Add CarPiece"/>"/>
                 </c:if>
             </td>
-        </br>
     </div>
 </form:form>
+</div>
 <br>
 <h3>CarPiece List</h3>
 
 
-<table class="table">
+<table class="table table-hover">
     <thead>
     <tr class="filters">
         <th>
@@ -254,7 +271,6 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                 <th width="80">Fuel Type</th>
                 <th width="50">In Stock</th>
                 <th width="70">Price</th>
-                <th width="100">Photo</th>
                 <th width="60">Edit</th>
                 <th width="60">Delete</th>
             </tr>
@@ -281,7 +297,7 @@ Dear <strong>${user}</strong>, Welcome to Page for Admin.
                     <td>${carPiece.fuelType}</td>
                     <td>${carPiece.inStock}</td>
                     <td>${carPiece.price}</td>
-                    <td><img src="${carPiece.photo}" style="width:100px;height:100px"></td>
+                    <%--<td><img src="${carPiece.photo}" style="width:100px;height:100px"></td>--%>
                     <td><a href="<c:url value='/edit/${carPiece.id}' />">Edit</a></td>
                     <td><a href="<c:url value='/remove/${carPiece.id}' />">Delete</a></td>
                 </tr>

@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Main Page</a>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -67,7 +67,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <h1>Welcome to About page</h1>
+            <h1>Welcome to Contact page</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
         </div>
     </div>
@@ -76,9 +76,9 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="${contextPath}/resources/js/jquery.js"></script>
+<script src="${pageContext}/resources/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>

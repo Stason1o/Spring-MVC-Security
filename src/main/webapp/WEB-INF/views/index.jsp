@@ -1,8 +1,8 @@
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
 <html class="full" lang="en">
 <head>
     <meta charset="utf-8">
@@ -39,7 +39,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Main Page</a>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -53,9 +53,18 @@
                 <li>
                     <a href="<c:url value="/contact" />">Contact</a>
                 </li>
-                <li>
-                    <a href="<c:url value="/logout" />">Logout</a>
-                </li>
+                <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>" >
+                    <li>
+                        <a href="<c:url value="/logout" />">Logout</a>
+                    </li>
+                </c:if>
+                <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')" />
+                <c:if test="${adminRole}">
+                    <li>
+                        <a href="<c:url value="/carPiece" />">Edit database list</a>
+                    </li>
+                </c:if>
+
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -67,7 +76,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <h1>Welcome to About page</h1>
+            <h1>Welcome to Main page</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
         </div>
     </div>
@@ -76,9 +85,9 @@
 <!-- /.container -->
 
 <!-- jQuery -->
-<script src="${contextPath}/resources/js/jquery.js"></script>
+<script src="${pageContext}/resources/js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+<script src="${pageContext}/resources/js/bootstrap.min.js"></script>
 </body>
 </html>
