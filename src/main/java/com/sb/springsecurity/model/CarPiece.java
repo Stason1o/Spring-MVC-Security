@@ -29,7 +29,7 @@ public class CarPiece {
     private String carModel;
 
     @Column(name = "car_year")
-    private Integer carYear;
+    private String carYear;
 
     @Column(name = "height")
     private Integer height;

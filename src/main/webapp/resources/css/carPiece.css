@@ -1,9 +1,14 @@
-
-
-.carPieceText{
-    margin-left: 40%;
-
+.full{
+    background: linear-gradient(to bottom right, #383838 , 	#C8C8C8 );
 }
+
+body{
+    color: #4cbde0;
+}
+/*.carPieceText{*/
+    /*margin-left: 40%;*/
+
+/*}*/
 
 .form-group {
     width: 250px;
@@ -31,31 +36,40 @@
     margin: auto;
 }
 
-.tg {
-    border-collapse: collapse;
-    border-spacing: 0;
-    border-color: #ccc;
+.display{
+    color: #608aff;
+
 }
 
-.tg td {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    padding: 10px 5px;
-    overflow: hidden;
-    word-break: normal;
-    border: 1px solid #ccc;
-    color: #333;
-    background-color: #fff;
+h3{
+    margin-left: 40%;
 }
+/*.tg {*/
+    /*border-collapse: collapse;*/
+    /*border-spacing: 0;*/
+    /*border-color: #ccc;*/
+/*}*/
 
-.tg th {
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    font-weight: normal;
-    padding: 10px 5px;
-    overflow: hidden;
-    word-break: normal;
-    border: 1px solid #ccc;
-    color: #333;
-    background-color: #f0f0f0;
-}
+/*.tg td {*/
+    /*font-family: Arial, sans-serif;*/
+    /*font-size: 14px;*/
+    /*padding: 10px 5px;*/
+    /*overflow: hidden;*/
+    /*word-break: normal;*/
+    /*border: 1px solid #ccc;*/
+    /*color: #333;*/
+    /*background-color: #fff;*/
+/*}*/
+
+/*.tg th {*/
+    /*font-family: Arial, sans-serif;*/
+    /*font-size: 14px;*/
+    /*font-weight: normal;*/
+    /*padding: 10px 5px;*/
+    /*overflow: hidden;*/
+    /*word-break: normal;*/
+    /*border: 1px solid #ccc;*/
+    /*color: #333;*/
+    /*background-color: #f0f0f0;*/
+/*}*/
+
