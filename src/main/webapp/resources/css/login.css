@@ -25,6 +25,10 @@ body, #mainWrapper, .form-control{
 	font-size:12px!important;
 }
 
+body{
+    margin-top: 0;
+    margin-bottom: 0;
+}
 #mainWrapper {
 	/*height: 720px; Without explicit px values, % in children's does not work*/
 	height: 100vh; /*with Viewport-Percentage, we can handles all devices screens  */
@@ -33,8 +37,16 @@ body, #mainWrapper, .form-control{
 	padding-bottom:10px;
 }
 
+.container{
+    width: 1000px;
+}
+
+.col-md-6.col-sm-12{
+    margin-top: 60px;
+}
+
 .login-container {
-    margin-top: 100px;
+    margin-top: 50px;
     /*background-color: floralwhite;*/
     width: 40%;
     left: 30%;

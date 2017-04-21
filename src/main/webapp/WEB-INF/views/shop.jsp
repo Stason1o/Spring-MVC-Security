@@ -1,84 +1,256 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page import="org.springframework.security.core.context.SecurityContextHolder" %><%--
+  Created by IntelliJ IDEA.
+  User: sbogdanschi
+  Date: 11/04/2017
+  Time: 3:54 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+<%@ page session="false" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
-<html class="full" lang="en">
+<html class="full">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Edit Car Piece Page</title>
 
-    <title>Welcome page</title>
+    <link href="<c:url value='/resources/css/bootstrap.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/the-big-picture.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/shop.css' />" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" rel="stylesheet"/>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="${contextPath}/resources/css/the-big-picture.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
 </head>
 <body>
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+<c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="<c:url value="/about" />">About</a>
+                    </li>
+                    <li>
+                        <a href="<c:url value="/shop" />">Shop</a>
+                    </li>
+                    <li>
+                        <a href="<c:url value="/contact" />">Contact</a>
+                    </li>
+                    <sec:authorize var="loggedIn" access="isAuthenticated()"/>
+                    <c:if test="${loggedIn}">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </c:if>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li>
-                    <a href="<c:url value="/about" />">About</a>
-                </li>
-                <li>
-                    <a href="<c:url value="/shop" />">Shop</a>
-                </li>
-                <li>
-                    <a href="<c:url value="/contact" />">Contact</a>
-                </li>
-                <li>
-                    <a href="<c:url value="/logout" />">Logout</a>
-                </li>
-            </ul>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="<c:url value="/about" />">About</a>
+                    </li>
+                    <li>
+                        <a href="<c:url value="/shop" />">Shop</a>
+                    </li>
+                    <li>
+                        <a href="<c:url value="/contact" />">Contact</a>
+                    </li>
+                    <sec:authorize var="loggedIn" access="isAuthenticated()"/>
+                    <c:if test="${loggedIn}">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </c:if>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+    </nav>
+
+    <div class="wrapper">
+        <div class="filters">
+            <table class="table table-hover">
+                <thead>
+                <tr class="filters">
+                    <th>
+                        <input id="piece_name-filter" class="form-control" placeholder="Enter piece name..">
+                    </th>
+                    <th>
+                        <input id="car_name-filter" class="form-control" placeholder="Enter car name ..">
+                    </th>
+                    <th>
+                        <input id="car_model-filter" class="form-control" placeholder="Enter car model..">
+                    </th>
+                    <th>
+                        <input id="car_year-filter" class="form-control" placeholder="Enter car year..">
+
+                    </th>
+                    <th>
+                        <input id="id_num-filter" class="form-control" placeholder="Enter identity number..">
+                    </th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+        <div class="content-wrapper">
+            <c:if test="${!empty listCarPieces}">
+                <table id="myTable" class="display">
+                    <thead>
+                    <tr>
+                        <th width="200">Piece Name</th>
+                            <%--<th width="30">Car Name</th>--%>
+                            <%--<th width="30">Car Model</th>--%>
+                            <%--<th width="60">Car Year</th>--%>
+                            <%--<th width="50">Height</th>--%>
+                            <%--<th width="50">Width</th>--%>
+                            <%--<th width="20">Thickness</th>--%>
+                            <%--<th width="120">Identity Number</th>--%>
+                            <%--<th width="50">Air Conditioner</th>--%>
+                            <%--<th width="60">Engine Name</th>--%>
+                            <%--<th width="60">Engine Volume</th>--%>
+                            <%--<th width="80">Transmission Type</th>--%>
+                            <%--<th width="80">Fuel Type</th>--%>
+                            <%--<th width="50">In Stock</th>--%>
+                            <%--<th width="70">Price</th>--%>
+                    </tr>
+                    </thead>
+                        <%--<tfoot>--%>
+                        <%--<tr>--%>
+                        <%--<th width="200">Piece Name</th>--%>
+                        <%--<th width="30">Car Name</th>--%>
+                        <%--<th width="30">Car Model</th>--%>
+                        <%--<th width="60">Car Year</th>--%>
+                        <%--<th width="50">Height</th>--%>
+                        <%--<th width="50">Width</th>--%>
+                        <%--<th width="20">Thickness</th>--%>
+                        <%--<th width="120">Identity Number</th>--%>
+                        <%--<th width="50">Air Conditioner</th>--%>
+                        <%--<th width="60">Engine Name</th>--%>
+                        <%--<th width="60">Engine Volume</th>--%>
+                        <%--<th width="80">Transmission Type</th>--%>
+                        <%--<th width="80">Fuel Type</th>--%>
+                        <%--<th width="50">In Stock</th>--%>
+                        <%--<th width="70">Price</th>--%>
+                        <%--</tr>--%>
+                        <%--</tfoot>--%>
+                    <tbody>
+                    <c:forEach items="${listCarPieces}" var="carPiece">
+                        <tr class="piece_row"
+                            data-piece_name="${carPiece.name}"
+                            data-car_name="${carPiece.car}"
+                            data-car_model="${carPiece.carModel}"
+                            data-car_year="${carPiece.carYear}"
+                            data-id_num="${carPiece.originalNumber}">
+                                <%--<td>${carPiece.name}</td>--%>
+                                <%--<td>${carPiece.car}</td>--%>
+                                <%--<td>${carPiece.carModel}</td>--%>
+                                <%--<td>${carPiece.carYear}</td>--%>
+                                <%--<td>${carPiece.height}</td>--%>
+                                <%--<td>${carPiece.width}</td>--%>
+                                <%--<td>${carPiece.thickness}</td>--%>
+                                <%--<td>${carPiece.originalNumber}</td>--%>
+                                <%--<td>${carPiece.airConditioner}</td>--%>
+                                <%--<td>${carPiece.engineName}</td>--%>
+                                <%--<td>${carPiece.engineVolume}</td>--%>
+                                <%--<td>${carPiece.transmissionType}</td>--%>
+                                <%--<td>${carPiece.fuelType}</td>--%>
+                                <%--<td>${carPiece.inStock}</td>--%>
+                                <%--<td>${carPiece.price}</td>--%>
+                            <td><img src="${carPiece.photo}" style="width:100px;height:100px"></td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
+            </c:if>
+        </div>
     </div>
-    <!-- /.container -->
-</nav>
+    <script>
 
-<!-- Page Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-sm-12">
-            <h1>Welcome to Shop page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
-        </div>
-    </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
+        (function () {
+            var
+                filters = {
+                    piece_name: null,
+                    car_name: null,
+                    car_model: null,
+                    car_year: null,
+                    id_num: null
+                };
 
-<!-- jQuery -->
-<script src="${contextPath}/resources/js/jquery.js"></script>
+            function updateFilters() {
+                $('.piece_row').hide().filter(function () {
+                    var
+                        self = $(this),
+                        result = true; // not guilty until proven guilty
 
-<!-- Bootstrap Core JavaScript -->
-<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+                    Object.keys(filters).forEach(function (filter) {
+                        if (filters[filter] && (filters[filter] != 'None') && (filters[filter] != 'Any')) {
+                            result = result && filters[filter] === self.data(filter);
+                        }
+                    });
+
+                    return result;
+                }).show();
+            }
+
+            function bindFilters() {
+                Object.keys(filters).forEach(function (filterName) {
+                    $('#' + filterName + '-filter').on('change', function () {
+                        filters[filterName] = this.value;
+                        updateFilters();
+                    });
+                });
+            }
+
+            bindFilters();
+        })();
+
+
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "pagingType": "full_numbers"
+            });
+        });
+    </script>
+</c:if>
 </body>
 </html>

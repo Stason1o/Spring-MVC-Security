@@ -37,9 +37,17 @@ body{
 }
 
 .display{
-    color: #608aff;
-
+    color: blue;
 }
+
+.tr-header{
+    color: whitesmoke;
+}
+
+.dataTables_info{
+    text-decoration-color:#46b8da;
+}
+
 
 h3{
     margin-left: 40%;

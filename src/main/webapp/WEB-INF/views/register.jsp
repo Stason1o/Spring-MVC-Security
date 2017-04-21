@@ -18,7 +18,7 @@
     <meta name="author" content="">
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
     <%--<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"/>--%>
-    <%--<link href="<c:url value='/static/css/app.css' />" rel="stylesheet"/>--%>
+    <%--<link href="<c:url value='/static/css/login.css' />" rel="stylesheet"/>--%>
     <link rel="stylesheet" type="text/css"
           href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>
 
@@ -41,31 +41,48 @@
             border-color: #ccc;
         }
 
-        .tg td {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            padding: 10px 5px;
-            overflow: hidden;
-            word-break: normal;
-            border: 1px solid #ccc;
-            color: #333;
-            background-color: #fff;
-        }
 
-        .tg th {
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-            font-weight: normal;
-            padding: 10px 5px;
-            overflow: hidden;
-            word-break: normal;
-            border: 1px solid #ccc;
-            color: #333;
-            background-color: #f0f0f0;
-        }
     </style>
 </head>
 <body>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="<c:url value="/about" />">About</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/shop" />">Shop</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/contact" />">Contact</a>
+                </li>
+                <sec:authorize var="loggedIn" access="isAuthenticated()"/>
+                <c:if test="${loggedIn}">
+                    <li>
+                        <a href="<c:url value="/logout" />">Logout</a>
+                    </li>
+                </c:if>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
@@ -92,7 +109,7 @@
                 <li>
                     <a href="<c:url value="/contact" />">Contact</a>
                 </li>
-                <sec:authorize var="loggedIn" access="isAuthenticated()" />
+                <sec:authorize var="loggedIn" access="isAuthenticated()"/>
                 <c:if test="${loggedIn}">
                     <li>
                         <a href="<c:url value="/logout" />">Logout</a>

@@ -1,10 +1,4 @@
-.outer_container {
-    margin: 20% 30% 20% 35%;
-}
-
 body {
-    margin-top: 50px;
-    margin-bottom: 50px;
     background: none;
 }
 
@@ -16,9 +10,19 @@ body {
     background-size: cover;
 }
 
-.col-md-6, .col-sm-12{
-    color: #4cbde0;
+.container{
+    width: 1000px;
 }
+
+.col-md-6.col-sm-12{
+    color: #4cbde0;
+    margin-top: 50px;
+}
+
+.outer_container {
+    margin: 40px 200px 60px 300px;
+}
+
 
 .form-group{
     color: #4cbde0;
@@ -27,4 +31,27 @@ body {
 
 .form-actions {
     padding-top: 10px;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #fff;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #f0f0f0;
 }

@@ -1,0 +1,40 @@
+.display{
+    overflow: scroll;
+}
+
+.wrapper{
+    display: block;
+    width: 1000px;
+    height:430px;
+    background: blue;
+    margin: auto;
+}
+
+.filters{
+    display: block;
+    width: inherit;
+    height: 70px;
+    background:red;
+}
+
+.content-wrapper{
+    display: block;
+    width: inherit;
+    height: 430px;
+    background:orangered;
+}
+
+.content{
+    display: block;
+    width: 250px;
+    height: 200px;
+    background: violet;
+    float:left;
+    margin: auto;
+}
+
+.rounded.float-left{
+    width: inherit;
+    height: inherit;
+}
+

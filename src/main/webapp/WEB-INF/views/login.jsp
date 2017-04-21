@@ -25,19 +25,53 @@
 
 
     <%--<link href="<c:url value='/static/css/bootstrap.css' />" rel="stylesheet"/>--%>
-    <link href="<c:url value='/resources/css/app.css' />" rel="stylesheet"/>
+    <link href="<c:url value='/resources/css/login.css' />" rel="stylesheet"/>
     <%--<link rel="stylesheet" type="text/css"--%>
-          <%--href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>--%>
+    <%--href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.css"/>--%>
 </head>
 
 <body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="<c:url value="/about" />">About</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/shop" />">Shop</a>
+                </li>
+                <li>
+                    <a href="<c:url value="/contact" />">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -69,7 +103,8 @@
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <h1>Welcome to this page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente
+                rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
         </div>
     </div>
     <div class="login-container">
@@ -89,7 +124,8 @@
                     </c:if>
                     <div class="input-group input-sm">
                         <label class="input-group-addon" for="username"><i class="fa fa-user"></i></label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Enter Username"
+                        <input type="text" class="form-control" id="username" name="username"
+                               placeholder="Enter Username"
                                required>
                     </div>
                     <div class="input-group input-sm">
@@ -105,7 +141,8 @@
                     </div>
                 </form>
                 <div class="form-actions">
-                    <a href="<c:url value="/user/registration" />" class="btn btn-block btn-primary btn-default">Register new user</a>
+                    <a href="<c:url value="/user/registration" />" class="btn btn-block btn-primary btn-default">Register
+                        new user</a>
                 </div>
             </div>
         </div>

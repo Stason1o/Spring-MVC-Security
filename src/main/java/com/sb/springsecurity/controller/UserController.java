@@ -35,10 +35,9 @@ public class UserController {
     @RequestMapping(value = "/user/registration", method = RequestMethod.POST)
     public String registerNewUser(@ModelAttribute("user") User user, BindingResult result, Errors errors, Model model) {
         userValidator.validate(user, result);
-        if(result.hasErrors()) {
+        if (result.hasErrors()) {
             return "register";
         }
-
         userService.saveUser(user);
 
         return "redirect:/login";
