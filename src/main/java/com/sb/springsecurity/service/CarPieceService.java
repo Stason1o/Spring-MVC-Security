@@ -17,4 +17,6 @@ public interface CarPieceService {
     CarPiece getCarPieceById(int id);
 
     void removeCarPiece(int id);
+
+    List<CarPiece> listTopTenCarPieces();
 }

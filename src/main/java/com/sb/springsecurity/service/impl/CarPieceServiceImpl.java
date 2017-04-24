@@ -43,4 +43,9 @@ public class CarPieceServiceImpl implements CarPieceService {
     public void removeCarPiece(int id) {
         this.carPieceDao.removeCarPiece(id);
     }
+
+    @Override
+    public List<CarPiece> listTopTenCarPieces() {
+        return this.carPieceDao.listTopTenCarPieces();
+    }
 }

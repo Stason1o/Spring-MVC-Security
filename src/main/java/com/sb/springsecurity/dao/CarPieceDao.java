@@ -17,4 +17,6 @@ public interface CarPieceDao {
     CarPiece gerCarPieceById(int id);
 
     void removeCarPiece(int id);
+
+    List<CarPiece> listTopTenCarPieces();
 }

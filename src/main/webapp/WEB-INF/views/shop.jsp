@@ -135,25 +135,25 @@
         <div class="content-wrapper">
             <c:if test="${!empty listCarPieces}">
                 <table id="myTable" class="display">
-                    <thead>
-                    <tr>
-                        <th width="200">Piece Name</th>
-                            <%--<th width="30">Car Name</th>--%>
-                            <%--<th width="30">Car Model</th>--%>
-                            <%--<th width="60">Car Year</th>--%>
-                            <%--<th width="50">Height</th>--%>
-                            <%--<th width="50">Width</th>--%>
-                            <%--<th width="20">Thickness</th>--%>
-                            <%--<th width="120">Identity Number</th>--%>
-                            <%--<th width="50">Air Conditioner</th>--%>
-                            <%--<th width="60">Engine Name</th>--%>
-                            <%--<th width="60">Engine Volume</th>--%>
-                            <%--<th width="80">Transmission Type</th>--%>
-                            <%--<th width="80">Fuel Type</th>--%>
-                            <%--<th width="50">In Stock</th>--%>
-                            <%--<th width="70">Price</th>--%>
-                    </tr>
-                    </thead>
+                    <%--<thead>--%>
+                    <%--<tr>--%>
+                        <%--<th width="200">Piece Name</th>--%>
+                            <%--&lt;%&ndash;<th width="30">Car Name</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="30">Car Model</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="60">Car Year</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="50">Height</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="50">Width</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="20">Thickness</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="120">Identity Number</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="50">Air Conditioner</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="60">Engine Name</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="60">Engine Volume</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="80">Transmission Type</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="80">Fuel Type</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="50">In Stock</th>&ndash;%&gt;--%>
+                            <%--&lt;%&ndash;<th width="70">Price</th>&ndash;%&gt;--%>
+                    <%--</tr>--%>
+                    <%--</thead>--%>
                         <%--<tfoot>--%>
                         <%--<tr>--%>
                         <%--<th width="200">Piece Name</th>--%>
@@ -196,7 +196,14 @@
                                 <%--<td>${carPiece.fuelType}</td>--%>
                                 <%--<td>${carPiece.inStock}</td>--%>
                                 <%--<td>${carPiece.price}</td>--%>
-                            <td><img src="${carPiece.photo}" style="width:100px;height:100px"></td>
+                            <th>
+                                <img src="${carPiece.photo}" style="width:100px;height:100px">
+                            <p>${carPiece.name} that is suitable for ${carPiece.car} ${carPiece.carModel}(${carPiece.carYear})
+                                costs ${carPiece.price} </p>
+                                <div class="form-actions">
+                                    <a href="<c:url value="#" />" class="btn btn-block btn-primary btn-default">Add to Cart</a>
+                                </div>
+                            </th>
                         </tr>
                     </c:forEach>
                     </tbody>

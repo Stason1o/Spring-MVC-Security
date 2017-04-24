@@ -6,7 +6,6 @@
     display: block;
     width: 1000px;
     height:430px;
-    background: blue;
     margin: auto;
 }
 
@@ -14,21 +13,19 @@
     display: block;
     width: inherit;
     height: 70px;
-    background:red;
 }
 
 .content-wrapper{
     display: block;
     width: inherit;
-    height: 430px;
-    background:orangered;
+    height: 500px;
+    overflow: scroll;
 }
 
 .content{
     display: block;
     width: 250px;
     height: 200px;
-    background: violet;
     float:left;
     margin: auto;
 }
@@ -37,4 +34,31 @@
     width: inherit;
     height: inherit;
 }
+
+img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 4px double #2e6da4;
+    float: left;
+}
+
+p{
+    margin-top: 40px;
+}
+
+th{
+    text-align: center;
+}
+
+table{
+    opacity: 0.8;
+}
+
+.btn.btn-block.btn-primary.btn-default{
+    float: right;
+    width: 100px;
+    background: #222222;
+}
+
 
