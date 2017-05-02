@@ -21,16 +21,12 @@ public class PageController {
 
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String aboutPage(ModelMap modelMap) {
-        if(getPrincipal().equals(ANONYMOUS_USER))
-            return "redirect:/login";
         modelMap.addAttribute("user", getPrincipal());
         return "about";
     }
 
     @RequestMapping(value = "/contact", method = RequestMethod.GET)
     public String contactPage(ModelMap modelMap){
-        if(getPrincipal().equals(ANONYMOUS_USER))
-            return "redirect:/login";
         modelMap.addAttribute("user", getPrincipal());
         return "contact";
     }
@@ -45,8 +41,6 @@ public class PageController {
 
     @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String indexPage(ModelMap modelMap){
-        if(getPrincipal().equals(ANONYMOUS_USER))
-            return "redirect:/login";
         modelMap.addAttribute("user", getPrincipal());
         return "index";
     }

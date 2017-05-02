@@ -22,6 +22,10 @@
     overflow: scroll;
 }
 
+.container{
+    width: 1000px;
+}
+
 .content{
     display: block;
     width: 250px;

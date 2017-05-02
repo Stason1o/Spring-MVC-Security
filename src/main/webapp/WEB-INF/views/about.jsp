@@ -132,7 +132,7 @@
     <script src="${contextPath}/resources/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+    <script src="${contextPath}/resources/js/bootstrap.js"></script>
 </c:if>
 </body>
 </html>

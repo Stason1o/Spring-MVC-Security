@@ -198,8 +198,8 @@
                                 <%--<td>${carPiece.price}</td>--%>
                             <th>
                                 <img src="${carPiece.photo}" style="width:100px;height:100px">
-                            <p>${carPiece.name} that is suitable for ${carPiece.car} ${carPiece.carModel}(${carPiece.carYear})
-                                costs ${carPiece.price} </p>
+                            <p>${carPiece.name}, suitable for ${carPiece.car} ${carPiece.carModel}(${carPiece.carYear})
+                                costs ${carPiece.price} MDL</p>
                                 <div class="form-actions">
                                     <a href="<c:url value="#" />" class="btn btn-block btn-primary btn-default">Add to Cart</a>
                                 </div>

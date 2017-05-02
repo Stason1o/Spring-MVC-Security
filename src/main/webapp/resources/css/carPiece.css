@@ -5,10 +5,6 @@
 body{
     color: #4cbde0;
 }
-/*.carPieceText{*/
-    /*margin-left: 40%;*/
-
-/*}*/
 
 .form-group {
     width: 250px;
@@ -40,6 +36,19 @@ body{
     color: blue;
 }
 
+.container{
+    color:red;
+}
+
+.dataTables_wrapper{
+    overflow-x: scroll;
+}
+
+.display.dataTable{
+    display: block;
+    overflow-x: scroll;
+}
+
 .tr-header{
     color: whitesmoke;
 }
@@ -47,7 +56,6 @@ body{
 .dataTables_info{
     text-decoration-color:#46b8da;
 }
-
 
 h3{
     margin-left: 40%;

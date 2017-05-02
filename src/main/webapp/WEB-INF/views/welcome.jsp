@@ -136,7 +136,7 @@
     <script src="resources/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
 </c:if>
 </body>
 </html>

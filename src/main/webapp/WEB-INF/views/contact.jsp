@@ -129,7 +129,7 @@
     <script src="${pageContext}/resources/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="${pageContext}/resources/js/bootstrap.min.js"></script>
+    <script src="${pageContext}/resources/js/bootstrap.js"></script>
 </c:if>
 </body>
 </html>

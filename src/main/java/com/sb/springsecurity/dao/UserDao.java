@@ -12,4 +12,3 @@ public interface UserDao {
 
     User findByEmail(String email);
 }
-
