@@ -22,3 +22,7 @@ p{
     border: 4px double #2e6da4;
     border-radius: 30px;
 }
+
+.li.right{
+    margin-left: 300px;
+}

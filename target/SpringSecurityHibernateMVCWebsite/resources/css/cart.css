@@ -47,26 +47,35 @@ img{
     float: left;
 }
 
-p{
-    margin-top: 40px;
-}
-
-th{
-    text-align: center;
-}
-
-table{
+.cartList{
+    height: 100px;
     opacity: 0.8;
+    background: ghostwhite;
 }
 
 .btn.btn-block.btn-primary.btn-default{
     float: right;
-    width: 100px;
+    width: auto;
     background: #222222;
+    margin-top: 10px;
 }
 
+#listCartContent{
+    /*margin-top: 100px;*/
+}
+
+.wrapper{
+    overflow-y: scroll;
+    height: 430px;
+}
 .li.right{
     margin-left: 300px;
+}
+
+.moneyAmount{
+    width: auto;
+    float: left;
+    margin-top: 10px;
 }
 
 

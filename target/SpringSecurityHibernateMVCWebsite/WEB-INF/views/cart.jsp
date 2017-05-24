@@ -1,9 +1,9 @@
 <%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
-
 <html class="full" lang="en">
 <head>
     <meta charset="utf-8">
@@ -19,7 +19,7 @@
 
     <!-- Custom CSS -->
     <link href="${contextPath}/resources/css/the-big-picture.css" rel="stylesheet">
-    <link href="${contextPath}/resources/css/contact.css" rel="stylesheet">
+    <link href="${contextPath}/resources/css/cart.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,7 +46,7 @@
                 <a class="navbar-brand" href="<c:url value="/index"/>">Main Page</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-3">
                 <ul class="nav navbar-nav">
                     <li>
                         <a href="<c:url value="/about" />">About</a>
@@ -57,9 +57,17 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <li>
-                        <a href="<c:url value="/logout" />">Logout</a>
-                    </li>
+                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </c:if>
+                    <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
+                    <c:if test="${adminRole}">
+                        <li>
+                            <a href="<c:url value="/carPiece" />">Edit database list</a>
+                        </li>
+                    </c:if>
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
@@ -96,9 +104,18 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <li>
-                        <a href="<c:url value="/logout" />">Logout</a>
-                    </li>
+                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </c:if>
+                    <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
+                    <c:if test="${adminRole}">
+                        <li>
+                            <a href="<c:url value="/carPiece" />">Edit database list</a>
+                        </li>
+                    </c:if>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -107,21 +124,36 @@
     </nav>
 
     <!-- Page Content -->
+    <c:set var="total" value="0"/>
     <div class="container">
         <div class="row">
-            <div class="col-md-11 col-sm-12">
-                <h1>Welcome to Contact page, ${user}</h1>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.1540880191001!2d28.863656629214084!3d47.00850549869687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c053df26553%3A0x69f12f71e465b651!2z0KHQutC70LDQtNGLINCQ0J4g0KLRgNCw0L3RgdGB0LXRgNCy0LjRgS3QnNCw0LrRgdC40LzRg9C8LCBNdW5jZXN0aSBId3kgMjkvMSwgQ2hpyJlpbsSDdSAyMDAxLCDQnNC-0LvQtNC-0LLQsA!5e0!3m2!1sru!2s!4v1492803632488"
-                        width="400" height="400" frameborder="1" style="border:0" allowfullscreen></iframe>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
+            <div class="col-md-12 col-sm-12">
+                <c:url var="addAction" value="/cart"/>
+                <form:form action="${addAction}" commandName="listCartContent">
+                <h1>Welcome to Main page, ${loggedUser.username}</h1>
+                <div class="wrapper">
+                    <c:choose>
+                    <c:when test="${not empty listCartContent}">
+                        <c:forEach var="piece" items="${listCartContent}">
+                            <p class="cartList">
+                                <img src="${piece.product.photo}" style="width:100px;height:100px">
+                                ${piece.id} ${piece.user.username} + ${piece.user.firstName} + ${piece.user.lastName} <br>
+                                ${piece.product.name} + ${piece.product.price}
+                                    <button class="btn btn-block btn-primary btn-default" type="submit"
+                                        value="${piece.product.id}" name="carPieceIdToDelete">Delete from cart</button>
+                                <c:set var="total" value="${total + piece.product.price}"/>
+                            </p>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        <h1>You don't have any items in your cart to buy</h1>
+                    </c:otherwise>
+                    </c:choose>
+                </div>
+                <p class="moneyAmount">Total amount: ${total} MDL</p>
+                </form:form>
+                <a class="btn btn-block btn-primary btn-default" type="submit" href="<c:url value="/confirmPage/${total}"/> "
+                   name="totalPrice">Order</a>
             </div>
         </div>
         <!-- /.row -->

@@ -1,0 +1,57 @@
+body {
+    background: none;
+}
+
+.full {
+    background: url(https://img2.goodfon.ru/original/1920x1080/5/1e/lamborghini-veneno-superkar.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.container{
+    width: 1000px;
+}
+
+.col-md-6.col-sm-12{
+    color: #4cbde0;
+    margin-top: 50px;
+}
+
+.outer_container {
+    margin: 40px 200px 60px 300px;
+}
+
+
+.form-group{
+    color: #4cbde0;
+    width: 350px;
+}
+
+.form-actions {
+    padding-top: 10px;
+}
+
+.tg td {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #fff;
+}
+
+.tg th {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    padding: 10px 5px;
+    overflow: hidden;
+    word-break: normal;
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #f0f0f0;
+}
