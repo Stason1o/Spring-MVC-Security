@@ -48,9 +48,13 @@ img{
 }
 
 .cartList{
+    display: block;
     height: 100px;
-    opacity: 0.8;
-    background: ghostwhite;
+    background: dimgray;
+}
+
+.cartList div{
+    margin: 30px 100px 0 150px;
 }
 
 .btn.btn-block.btn-primary.btn-default{
@@ -67,15 +71,37 @@ img{
 .wrapper{
     overflow-y: scroll;
     height: 430px;
+    max-height: 430px;
 }
+
+.noscroll{
+    height: 430px;
+    max-height: 430px;
+}
+
+.wrapper::-webkit-scrollbar{
+    width: 14px;
+}
+
+.wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+
+.wrapper::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
 .li.right{
-    margin-left: 300px;
+    margin-left: 100px;
 }
 
 .moneyAmount{
     width: auto;
-    float: left;
-    margin-top: 10px;
+    float: right;
+    margin-top: 15px;
+    margin-right: 50px;
 }
 
 

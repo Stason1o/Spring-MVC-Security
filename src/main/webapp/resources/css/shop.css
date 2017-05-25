@@ -2,6 +2,7 @@
     overflow: scroll;
 }
 
+
 .wrapper{
     display: block;
     width: 1000px;
@@ -53,20 +54,17 @@ p{
 
 th{
     text-align: center;
+
 }
 
 table{
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .btn.btn-block.btn-primary.btn-default{
     float: right;
     width: 100px;
     background: #222222;
-}
-
-.li.right{
-    margin-left: 300px;
 }
 
 

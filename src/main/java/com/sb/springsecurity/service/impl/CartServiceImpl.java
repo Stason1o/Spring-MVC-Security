@@ -33,6 +33,11 @@ public class CartServiceImpl implements CartService {
     }
 
     @Override
+    public List<Cart> getPurchasedItemsById(int id) {
+        return cartDao.getPurchasedItemsById(id);
+    }
+
+    @Override
     public void saveOrder(Cart cart, int userId, int productId) {
         System.out.println(cart.getProduct() + "----------------------------------service");
         System.out.println(cart.getUser() + "-----------------------------------service");

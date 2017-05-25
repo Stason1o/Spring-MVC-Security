@@ -129,6 +129,18 @@ public class PageController {
         return "index";
     }
 
+    @RequestMapping(value = "/history", method = RequestMethod.GET)
+    public String showHistoryPage(ModelMap modelMap){
+        if(getPrincipal().equals(ANONYMOUS_USER)){
+            return "redirect:/login";
+        }
+
+        User loggedUser = userService.findByUsername(getPrincipal());
+        modelMap.addAttribute("loggedUser", loggedUser);
+        modelMap.addAttribute("listPurchasedProducts", cartService.getPurchasedItemsById(loggedUser.getId()));
+        return "history";
+    }
+
     private String getPrincipal(){
         String userName;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();

@@ -2,6 +2,7 @@ package com.sb.springsecurity.dao.impl;
 
 import com.sb.springsecurity.dao.CartDao;
 import com.sb.springsecurity.model.Cart;
+import org.hibernate.Hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,14 +24,21 @@ public class CartDaoImpl implements CartDao {
         Session session = this.sessionFactory.getCurrentSession();
         List<Cart> list = session
                 .createQuery("FROM Cart where user.id=" + id + " and isApproved=false").list();
-//        for (Cart cart: list) {
-//            Hibernate.initialize(cart.getUser());
-//            Hibernate.initialize(cart.getProduct());
-//        }
+        for (Cart cart: list) {
+            Hibernate.initialize(cart.getUser());
+            Hibernate.initialize(cart.getProduct());
+        }
+        return list;
+    }
+
+    @Override
+    public List<Cart> getPurchasedItemsById(int id) {
+        Session session = this.sessionFactory.getCurrentSession();
+        List<Cart> list = session
+                .createQuery("FROM Cart where user.id=" + id + " and isApproved=true").list();
         System.out.println("==============================================================");
-        for (Cart cart :
-                list) {
-//            System.out.println(cart.getId() + " -------- " + cart.getUser().getId() + "------" + cart.getProduct());
+        for (Cart cart : list) {
+            Hibernate.initialize(cart);
         }
         return list;
     }
@@ -41,7 +49,6 @@ public class CartDaoImpl implements CartDao {
         session.createSQLQuery("INSERT INTO cart(user_id, piece_id) VALUES (:userId, :productId)")
                 .setParameter("userId", userId)
                 .setParameter("productId", productId).executeUpdate();
-//        session.persist(cart);
     }
 
     @Override

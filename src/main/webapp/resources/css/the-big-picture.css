@@ -4,20 +4,55 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'),
+    local('Roboto-Regular'),
+    url(http://themes.googleusercontent.com/static/fonts/roboto/v11/2UX7WLTfW3W8TclTUvlFyQ.woff)
+    format('woff');
+}
+
 body {
 	margin-top: 50px;
 	margin-bottom: 50px;
 	background: none;
+    font-family: Roboto, serif;
 }
 
 .full {
-  background: url(https://img2.goodfon.ru/original/1920x1080/5/1e/lamborghini-veneno-superkar.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+    /*background: url(https://img2.goodfon.ru/original/1920x1080/5/1e/lamborghini-veneno-superkar.jpg) no-repeat center center fixed;*/
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
 }
 
 .col-md-6, .col-sm-12{
-    color: #4cbde0;
+    color: ghostwhite;
+}
+
+.nav.navbar-nav{
+    width: 860px;
+}
+
+.li.right{
+    margin-left: 250px;
+}
+
+.bgimg {
+    display: block;
+    height:100%;
+    width:100%;
+    text-align:center;
+    background:url(https://weneedfun.com/wp-content/uploads/2016/04/Lamborghini-Veneno-1.jpg) no-repeat center center fixed;
+    background-size:cover;
+    -webkit-filter: blur(13px);
+    -ms-filter: blur(13px);
+    filter: blur(3px);
+    position: absolute;
+    left:0;
+    top: 0;
 }

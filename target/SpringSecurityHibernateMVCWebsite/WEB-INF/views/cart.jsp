@@ -71,6 +71,9 @@
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
+                    <li>
+                        <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -123,6 +126,8 @@
         <!-- /.container -->
     </nav>
 
+    <div class="bgimg"></div>
+
     <!-- Page Content -->
     <c:set var="total" value="0"/>
     <div class="container">
@@ -131,29 +136,39 @@
                 <c:url var="addAction" value="/cart"/>
                 <form:form action="${addAction}" commandName="listCartContent">
                 <h1>Welcome to Main page, ${loggedUser.username}</h1>
-                <div class="wrapper">
                     <c:choose>
                     <c:when test="${not empty listCartContent}">
+                        <div class="wrapper">
                         <c:forEach var="piece" items="${listCartContent}">
-                            <p class="cartList">
+                            <div class="cartList">
                                 <img src="${piece.product.photo}" style="width:100px;height:100px">
-                                ${piece.id} ${piece.user.username} + ${piece.user.firstName} + ${piece.user.lastName} <br>
-                                ${piece.product.name} + ${piece.product.price}
+                                <div>
+                                    ${piece.product.name}, suitable for ${piece.product.car} ${piece.product.carModel}(${piece.product.carYear})
+                                costs ${piece.product.price} MDL
+                                </div>
                                     <button class="btn btn-block btn-primary btn-default" type="submit"
                                         value="${piece.product.id}" name="carPieceIdToDelete">Delete from cart</button>
                                 <c:set var="total" value="${total + piece.product.price}"/>
-                            </p>
+                            </div>
                         </c:forEach>
+                        </div>
+                            <a class="btn btn-block btn-primary btn-default" type="submit" href="<c:url value="/confirmPage/${total}"/> "
+                               name="totalPrice">Order</a>
+                            <p class="moneyAmount">Total amount: ${total} MDL</p>
+
+
                     </c:when>
                     <c:otherwise>
-                        <h1>You don't have any items in your cart to buy</h1>
+                        <div class="noscroll">
+                            <h1>You don't have any items in your cart to buy</h1>
+                        </div>
+
                     </c:otherwise>
                     </c:choose>
                 </div>
-                <p class="moneyAmount">Total amount: ${total} MDL</p>
+
                 </form:form>
-                <a class="btn btn-block btn-primary btn-default" type="submit" href="<c:url value="/confirmPage/${total}"/> "
-                   name="totalPrice">Order</a>
+
             </div>
         </div>
         <!-- /.row -->

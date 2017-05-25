@@ -47,14 +47,28 @@ img{
     float: left;
 }
 
+img:hover{
+    width: 500px;
+    height: 500px;
+}
+
 .cartList{
-    display: block;
     height: 100px;
+    margin: 10px 0 10px 0;
+    /*opacity: ;*/
     background: dimgray;
 }
 
-.cartList div{
-    margin: 30px 100px 0 150px;
+.productInfo{
+    display: block;
+    width: 200px;
+    height: 100px;
+    margin: 0 100px 0 100px;
+    float: left;
+}
+
+.productInfo p{
+    margin-top: 20px;
 }
 
 .btn.btn-block.btn-primary.btn-default{
@@ -64,17 +78,8 @@ img{
     margin-top: 10px;
 }
 
-#listCartContent{
-    /*margin-top: 100px;*/
-}
-
 .wrapper{
     overflow-y: scroll;
-    height: 430px;
-    max-height: 430px;
-}
-
-.noscroll{
     height: 430px;
     max-height: 430px;
 }
@@ -90,18 +95,18 @@ img{
 
 .wrapper::-webkit-scrollbar-thumb {
     border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-
-.li.right{
-    margin-left: 100px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1);
 }
 
 .moneyAmount{
     width: auto;
-    float: right;
-    margin-top: 15px;
-    margin-right: 50px;
+    float: left;
+    margin-top: 10px;
 }
+
+.li.right{
+    margin-left: 120px;
+}
+
 
 

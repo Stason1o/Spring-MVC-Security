@@ -64,6 +64,9 @@
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
+                    <li>
+                        <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -109,6 +112,8 @@
         </div>
         <!-- /.container -->
     </nav>
+
+    <div class="bgimg"></div>
 
     <div class="wrapper">
         <div class="filters">

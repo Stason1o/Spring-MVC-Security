@@ -11,6 +11,8 @@ public interface CartDao {
 
     List<Cart> getAllOrdersById(int id);
 
+    List<Cart> getPurchasedItemsById(int id);
+
     void saveOrder(Cart cart, int userId, int productId);
 
     void deleteOrderByUsername(String username);

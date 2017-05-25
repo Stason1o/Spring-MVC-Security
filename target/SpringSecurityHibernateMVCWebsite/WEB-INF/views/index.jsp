@@ -70,6 +70,9 @@
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
+                    <li>
+                        <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -122,14 +125,25 @@
         <!-- /.container -->
     </nav>
 
+    <div class="bgimg"></div>
     <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col-md-11 col-sm-12">
-                <h1>Welcome to Main page, ${user}</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
+                <h1>Welcome to autoshop</h1>
+                <div class="leftDiv">
+                    <p> Shop</p>
+                </div>
+                <div class="rightDiv">
+                    <p>Contacts<br><span style="width: 100px; height: 100px" class="glyphicon glyphicon-phone"></span></p>
+                </div>
+                <div class="leftDiv">
+                    <p>Shopping Cart</p>
+                </div>
+                <div class="rightDiv">
+                    <p>About</p>
+                </div>
+
             </div>
         </div>
         <!-- /.row -->

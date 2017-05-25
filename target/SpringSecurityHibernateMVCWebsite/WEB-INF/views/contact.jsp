@@ -57,11 +57,16 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <li>
-                        <a href="<c:url value="/logout" />">Logout</a>
-                    </li>
+                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </c:if>
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
+                    </li>
+                    <li>
+                        <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
                     </li>
                 </ul>
             </div>
@@ -106,22 +111,26 @@
         <!-- /.container -->
     </nav>
 
+    <div class="bgimg"></div>
     <!-- Page Content -->
     <div class="container">
         <div class="row">
             <div class="col-md-11 col-sm-12">
-                <h1>Welcome to Contact page, ${user}</h1>
+                <h1>Our contacts: </h1>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d680.1540880191001!2d28.863656629214084!3d47.00850549869687!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c97c053df26553%3A0x69f12f71e465b651!2z0KHQutC70LDQtNGLINCQ0J4g0KLRgNCw0L3RgdGB0LXRgNCy0LjRgS3QnNCw0LrRgdC40LzRg9C8LCBNdW5jZXN0aSBId3kgMjkvMSwgQ2hpyJlpbsSDdSAyMDAxLCDQnNC-0LvQtNC-0LLQsA!5e0!3m2!1sru!2s!4v1492803632488"
                         width="400" height="400" frameborder="1" style="border:0" allowfullscreen></iframe>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
+                <p>
+
+                    Location: Moldova <br><br>
+                    City: Chisinau <br><br>
+                    Street: Muncesti 29/1<br>
+                </p>
+                <p>
+
+                    Telephone: 022 55-55-55<br><br>
+                    Mobile number: +373 69 255-346<br><br>
+                    Fax: 373 11-11-11<br>
+                </p>
             </div>
         </div>
         <!-- /.row -->
