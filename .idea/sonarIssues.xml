@@ -43,6 +43,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/.idea/workspace.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/pom.xml">
           <value>
             <set />
@@ -108,6 +113,11 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/OrderDao.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/PersonDao.java">
           <value>
             <set />
@@ -119,6 +129,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/OrderDaoImpl.java">
           <value>
             <set />
           </value>
@@ -153,12 +168,57 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CartInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CartLineInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CustomerInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/FuelType.java">
           <value>
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Order.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/OrderDetail.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/OrderDetailInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/OrderInfo.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/PaginationResult.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Person.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/ProductInfo.java">
           <value>
             <set />
           </value>
@@ -179,6 +239,31 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Year.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/entity/CarPiece.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/entity/Order.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/entity/OrderDetail.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/entity/User.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/entity/UserProfile.java">
           <value>
             <set />
           </value>
@@ -224,6 +309,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/impl/UserServiceImpl.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/util/Utils.java">
           <value>
             <set />
           </value>
@@ -298,12 +388,27 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accountInfo.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carPiece.jsp">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/footer.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/header.jsp">
           <value>
             <set />
           </value>
@@ -323,7 +428,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/menu.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orderList.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/person.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/product.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/productList.jsp">
           <value>
             <set />
           </value>
@@ -334,6 +464,26 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shop.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shoppingCart.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shoppingCartConfirmation.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shoppingCartCustomer.jsp">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shoppingCartFinalize.jsp">
           <value>
             <set />
           </value>
@@ -379,6 +529,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/main/webapp/resources/css/shop.css">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
           <value>
             <set />
           </value>
