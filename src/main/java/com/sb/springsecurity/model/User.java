@@ -38,6 +38,9 @@ public class User {
 
     @Column(name = "STATE", nullable = false)
     private String state = State.ACTIVE.getState();
+//
+//    @OneToOne(mappedBy = "user")
+//    private Cart cart;
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "APP_USER_USER_PROFILE",

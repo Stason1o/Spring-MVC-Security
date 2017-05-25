@@ -2,7 +2,6 @@
     overflow: scroll;
 }
 
-
 .wrapper{
     display: block;
     width: 1000px;
@@ -48,23 +47,40 @@ img{
     float: left;
 }
 
-p{
-    margin-top: 40px;
-}
-
-th{
-    text-align: center;
-
-}
-
-table{
-    opacity: 0.9;
+.cartList{
+    height: 100px;
+    opacity: 0.8;
+    background: ghostwhite;
 }
 
 .btn.btn-block.btn-primary.btn-default{
     float: right;
-    width: 100px;
+    width: auto;
     background: #222222;
+    margin-top: 10px;
+}
+
+#listCartContent{
+    /*margin-top: 100px;*/
+}
+
+.li.right{
+    margin-left: 300px;
+}
+
+.moneyAmount{
+    width: auto;
+    float: left;
+    margin-top: 10px;
+}
+
+.outer_container{
+    width: 600px;
+    margin-left: 20%;
+    margin-top: 10%;
+}
+td{
+    width: inherit;
 }
 
 

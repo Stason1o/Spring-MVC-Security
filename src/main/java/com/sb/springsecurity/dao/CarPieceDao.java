@@ -12,7 +12,7 @@ public interface CarPieceDao {
 
     void updateCarPiece(CarPiece p);
 
-    List<CarPiece> listCarPieces();
+    List listCarPieces();
 
     CarPiece gerCarPieceById(int id);
 

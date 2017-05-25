@@ -60,6 +60,10 @@ body{
 h3{
     margin-left: 40%;
 }
+
+.li.right{
+    margin-left: 200px;
+}
 /*.tg {*/
     /*border-collapse: collapse;*/
     /*border-spacing: 0;*/

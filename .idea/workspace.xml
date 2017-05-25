@@ -2,29 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b6f12da-3ef2-407d-85f1-7c301d104879" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/accessDenied.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/admin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carPiece.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dba.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/register.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shop.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/META-INF/MANIFEST.MF" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/classes/application.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/views/accessDenied.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/views/admin.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/views/dba.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/views/login.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/WEB-INF/views/welcome.jsp" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/static/css/app.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/SpringSecurityHibernateRoleBasedLoginExample/static/css/bootstrap.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/application.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sonarIssues.xml" afterPath="$PROJECT_DIR$/.idea/sonarIssues.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CartDao.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CartDaoImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/Cart.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/CartService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/impl/CartServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/cart.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/confirmPage.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/history.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/cart.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/confirmPage.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/history.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/about.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/carPiece.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/contact.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/index.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/shop.jsp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/SpringSecurityHibernateMVCWebsite/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/SpringSecurityHibernateMVCWebsite.iml" afterPath="$PROJECT_DIR$/SpringSecurityHibernateMVCWebsite.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PageController.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CarPieceDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CarPieceDao.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/UserDaoImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/UserDaoImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CarPiece.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/CarPiece.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carPiece.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/carPiece.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shop.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shop.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/about.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/about.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/carPiece.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/carPiece.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/contact.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/contact.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/shop.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/the-big-picture.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/the-big-picture.css" />
     </list>
     <ignored path="SpringSecurityHibernateRoleBasedLoginExample.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -97,62 +111,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CustomUserDetailsService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/CustomUserDetailsService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/service/UserService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarPieceValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/CarPieceValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-              <folding>
-                <element signature="e#898#899#0" expanded="false" />
-                <element signature="e#950#951#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserValidator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/validators/UserValidator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1003">
-              <caret line="67" column="3" lean-forward="false" selection-start-line="67" selection-start-column="3" selection-end-line="67" selection-end-column="3" />
-              <folding>
-                <element signature="e#815#816#0" expanded="false" />
-                <element signature="e#863#864#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/User.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
               <folding>
-                <element signature="e#1274#1275#0" expanded="false" />
-                <element signature="e#1312#1313#0" expanded="false" />
-                <element signature="e#1374#1375#0" expanded="false" />
-                <element signature="e#1428#1429#0" expanded="false" />
+                <element signature="e#1437#1438#0" expanded="false" />
+                <element signature="e#1491#1492#0" expanded="false" />
+                <marker date="1495736115337" expanded="true" signature="1008:1224" ph="@{...}" />
+                <marker date="1495736115337" expanded="false" signature="1336:1347" ph=" { " />
+                <marker date="1495736115337" expanded="false" signature="1370:1376" ph=" }" />
               </folding>
             </state>
           </provider>
@@ -174,55 +143,126 @@
             <state relative-caret-position="595">
               <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
               <folding>
-                <marker date="1495735927027" expanded="true" signature="118439:118481" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118439:118499" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118439:118512" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118439:118527" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118562:121087" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118575:121072" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118629:119183" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118648:119168" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118676:118796" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118703:118767" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118924:119148" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118964:119114" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="118985:119092" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119233:119552" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119252:119537" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119332:119517" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119372:119483" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119393:119461" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119603:119922" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119622:119907" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119702:119887" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119742:119853" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119763:119831" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119965:120278" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="119984:120263" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120058:120243" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120098:120209" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120119:120187" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120329:120672" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120348:120657" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120452:120637" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120492:120603" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120513:120581" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120724:121058" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120743:121043" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120838:121023" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120878:120989" ph="..." />
-                <marker date="1495735927027" expanded="true" signature="120899:120967" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118439:118481" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118439:118499" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118439:118512" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118439:118527" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118562:121087" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118575:121072" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118629:119183" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118648:119168" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118676:118796" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118703:118767" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118924:119148" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118964:119114" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="118985:119092" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119233:119552" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119252:119537" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119332:119517" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119372:119483" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119393:119461" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119603:119922" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119622:119907" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119702:119887" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119742:119853" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119763:119831" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119965:120278" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="119984:120263" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120058:120243" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120098:120209" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120119:120187" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120329:120672" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120348:120657" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120452:120637" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120492:120603" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120513:120581" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120724:121058" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120743:121043" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120838:121023" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120878:120989" ph="..." />
+                <marker date="1495736053882" expanded="true" signature="120899:120967" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
+            <state relative-caret-position="329">
               <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PageController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1386">
+              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarPieceDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-114">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CartDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-434">
+              <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding>
+                <marker date="1495736115306" expanded="true" signature="1624:1688" ph="INSERT INTO cart... " />
+                <marker date="1495736115306" expanded="true" signature="1964:2050" ph="DELETE FROM " />
+                <marker date="1495736115306" expanded="true" signature="1998:2035" ph="Select id fr... app_user" />
+                <marker date="1495736115306" expanded="true" signature="2224:2257" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserDaoImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/UserDaoImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="158">
+              <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CartDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CartDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CarPieceDao.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CarPieceDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1611,7 +1651,7 @@
       <workItem from="1493752907154" duration="3310000" />
       <workItem from="1495364194906" duration="8898000" />
       <workItem from="1495381914042" duration="1790000" />
-      <workItem from="1495654700880" duration="1242000" />
+      <workItem from="1495654700880" duration="1350000" />
     </task>
     <task id="LOCAL-00001" summary="Create Entity classes&#10;&#10;Car, CarEngine, CarModel, CarPiece, FuelType, TransmissionType, Year">
       <created>1492032596791</created>
@@ -1687,7 +1727,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="238065000" />
+    <option name="totallyTimeSpent" value="238173000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -1806,22 +1846,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/shop.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3349">
-          <caret line="197" column="17" lean-forward="false" selection-start-line="197" selection-start-column="17" selection-end-line="197" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="157" column="36" lean-forward="false" selection-start-line="157" selection-start-column="36" selection-end-line="157" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/contact.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1867,14 +1891,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/PaginationResult.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/model/ProductInfo.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="680">
@@ -1895,35 +1911,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/OrderDaoImpl.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/UserDaoImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CarPieceDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/OrderDao.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -2021,10 +2009,11 @@
         <state relative-caret-position="102">
           <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding>
-            <element signature="e#1274#1275#0" expanded="false" />
-            <element signature="e#1312#1313#0" expanded="false" />
-            <element signature="e#1374#1375#0" expanded="false" />
-            <element signature="e#1428#1429#0" expanded="false" />
+            <element signature="e#1437#1438#0" expanded="false" />
+            <element signature="e#1491#1492#0" expanded="false" />
+            <marker date="1495736115337" expanded="true" signature="1008:1224" ph="@{...}" />
+            <marker date="1495736115337" expanded="false" signature="1336:1347" ph=" { " />
+            <marker date="1495736115337" expanded="false" signature="1370:1376" ph=" }" />
           </folding>
         </state>
       </provider>
@@ -2050,44 +2039,44 @@
         <state relative-caret-position="595">
           <caret line="37" column="45" lean-forward="false" selection-start-line="37" selection-start-column="45" selection-end-line="37" selection-end-column="45" />
           <folding>
-            <marker date="1495735927027" expanded="true" signature="118439:118481" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118439:118499" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118439:118512" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118439:118527" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118562:121087" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118575:121072" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118629:119183" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118648:119168" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118676:118796" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118703:118767" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118924:119148" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118964:119114" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="118985:119092" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119233:119552" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119252:119537" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119332:119517" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119372:119483" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119393:119461" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119603:119922" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119622:119907" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119702:119887" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119742:119853" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119763:119831" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119965:120278" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="119984:120263" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120058:120243" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120098:120209" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120119:120187" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120329:120672" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120348:120657" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120452:120637" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120492:120603" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120513:120581" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120724:121058" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120743:121043" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120838:121023" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120878:120989" ph="..." />
-            <marker date="1495735927027" expanded="true" signature="120899:120967" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118439:118481" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118439:118499" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118439:118512" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118439:118527" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118562:121087" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118575:121072" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118629:119183" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118648:119168" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118676:118796" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118703:118767" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118924:119148" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118964:119114" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="118985:119092" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119233:119552" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119252:119537" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119332:119517" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119372:119483" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119393:119461" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119603:119922" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119622:119907" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119702:119887" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119742:119853" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119763:119831" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119965:120278" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="119984:120263" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120058:120243" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120098:120209" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120119:120187" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120329:120672" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120348:120657" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120452:120637" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120492:120603" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120513:120581" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120724:121058" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120743:121043" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120838:121023" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120878:120989" ph="..." />
+            <marker date="1495736053882" expanded="true" signature="120899:120967" ph="..." />
           </folding>
         </state>
       </provider>
@@ -2102,9 +2091,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="329">
           <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/controller/PageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1386">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CarPieceDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/CartDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-434">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <marker date="1495736115306" expanded="true" signature="1624:1688" ph="INSERT INTO cart... " />
+            <marker date="1495736115306" expanded="true" signature="1964:2050" ph="DELETE FROM " />
+            <marker date="1495736115306" expanded="true" signature="1998:2035" ph="Select id fr... app_user" />
+            <marker date="1495736115306" expanded="true" signature="2224:2257" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/impl/UserDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CartDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sb/springsecurity/dao/CarPieceDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

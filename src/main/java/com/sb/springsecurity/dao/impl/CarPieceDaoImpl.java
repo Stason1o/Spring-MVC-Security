@@ -34,7 +34,6 @@ public class CarPieceDaoImpl implements CarPieceDao {
     public List<CarPiece> listCarPieces() {
         Session session = this.sessionFactory.getCurrentSession();
         List list = session.createCriteria(CarPiece.class).list();
-        list.forEach(System.out::println);
 
         return list;
     }

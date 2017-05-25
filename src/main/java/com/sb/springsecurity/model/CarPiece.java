@@ -67,4 +67,6 @@ public class CarPiece {
     @Column(name = "photo")
     private String photo;
 
+//    @OneToOne(mappedBy = "product")
+//    private Cart cart;
 }
