@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="SpringSecurityHibernateMVCWebsite:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="SpringSecurityHibernateMVCWebsite.war">
-      <element id="artifact" artifact-name="SpringSecurityHibernateMVCWebsite:war exploded" />
-    </root>
-  </artifact>
-</component>
