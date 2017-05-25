@@ -117,20 +117,27 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-11 col-sm-12">
-                <h1>Welcome to About page, ${user}</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id
-                    sapiente rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur
-                    eligendi.</p>
+            <div class="col-md-12 col-sm-12">
+                <h1>About Us</h1>
+                <div class="innerWrapper">
+                    <br>
+                    Our company was founded in 2005 year. We are 12 years on the Moldova market!
+                    Each client remained happy about his purchase.
+                    <br>
+                    <br>
+                    We provide the spare parts for the majority of the cars.
+                    In assortment there is a wide choice of spare parts, such as:<br>
+                    <ul>
+                        <li>Body parts</li>
+                        <li>Optics</li>
+                        <li>Radiators</li>
+                        <li>Engine parts</li>
+                        etc.
+                    </ul>
+
+
+                <!--TODO finish the text!-->
+                </div>
             </div>
         </div>
         <!-- /.row -->

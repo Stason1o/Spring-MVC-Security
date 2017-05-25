@@ -129,21 +129,32 @@
     <!-- Page Content -->
     <div class="container">
         <div class="row">
-            <div class="col-md-11 col-sm-12">
-                <h1>Welcome to autoshop</h1>
-                <div class="leftDiv">
-                    <p> Shop</p>
-                </div>
-                <div class="rightDiv">
-                    <p>Contacts<br><span style="width: 100px; height: 100px" class="glyphicon glyphicon-phone"></span></p>
-                </div>
-                <div class="leftDiv">
-                    <p>Shopping Cart</p>
-                </div>
-                <div class="rightDiv">
-                    <p>About</p>
-                </div>
+            <div class="col-md-12 col-sm-12">
 
+                <a href="<c:url value="/shop"/>">
+                    <div class="leftDiv">
+                        <img class="shopImage" src="${pageContext.request.contextPath}/resources/images/vehicle-repair.png"/>
+                        <br>Car parts
+                    </div>
+                </a>
+                <a href="<c:url value="/cart"/> ">
+                    <div class="leftDiv">
+                        <img class="shopImage" src="${pageContext.request.contextPath}/resources/images/shopping-cart.png"/>
+                        <br>Goods
+                    </div>
+                </a>
+                <a href="<c:url value="/about"/> ">
+                    <div class="leftDiv">
+                        <img class="shopImage" src="${pageContext.request.contextPath}/resources/images/information-symbol.png"/>
+                        <br>Information
+                    </div>
+                </a>
+                <a href="<c:url value="/contact"/> ">
+                    <div class="leftDiv">
+                        <img class="shopImage" src="${pageContext.request.contextPath}/resources/images/map-pin-marked.png">
+                        <br>Contacts
+                    </div>
+                </a>
             </div>
         </div>
         <!-- /.row -->

@@ -5,22 +5,19 @@
 h1{
     text-align: center;
     opacity: 0.7;
-    margin: 90px 150px 50px 250px;
+    margin: 50px 150px 50px 200px;
     padding: 10px;
     color: #fff;
-    background-color: #286090;
-    border: 4px double #2e6da4;
-    border-radius: 30px;
+    /*border: 4px double #2e6da4;*/
+    /*border-radius: 30px;*/
 }
 
-p{
-    margin: 30px 0px 30px 0px;
-    opacity: 0.8;
-    text-align: center;
-    color: #fff;
-    background-color: #286090;
-    border: 4px double #2e6da4;
-    border-radius: 30px;
+.innerWrapper{
+    background: #222222;
+    display: block;
+    width: 850px;
+    height: 400px;
+    margin: auto;
+    opacity:0.8;
+    font-size: 18px;
 }
-
-
