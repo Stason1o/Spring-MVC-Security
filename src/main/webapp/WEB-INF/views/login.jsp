@@ -97,14 +97,13 @@
     </div>
     <!-- /.container -->
 </nav>
-
+<div class="bgimg"></div>
 <!-- Page Content -->
 <div class="container">
     <div class="row">
         <div class="col-md-6 col-sm-12">
-            <h1>Welcome to this page</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iusto, unde, sunt incidunt id sapiente
-                rerum soluta voluptate harum veniam fuga odit ea pariatur vel eaque sint sequi tenetur eligendi.</p>
+            <h1>Hello, visitor!</h1>
+            <p>To access all features of web-site, please Log In or Register.</p>
         </div>
     </div>
     <div class="login-container">

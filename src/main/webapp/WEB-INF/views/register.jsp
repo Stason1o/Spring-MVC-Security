@@ -70,12 +70,11 @@
                 <li>
                     <a href="<c:url value="/contact" />">Contact</a>
                 </li>
-                <sec:authorize var="loggedIn" access="isAuthenticated()"/>
-                <c:if test="${loggedIn}">
+                <sec:authorize access="isAuthenticated()">
                     <li>
                         <a href="<c:url value="/logout" />">Logout</a>
                     </li>
-                </c:if>
+                </sec:authorize>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -109,12 +108,11 @@
                 <li>
                     <a href="<c:url value="/contact" />">Contact</a>
                 </li>
-                <sec:authorize var="loggedIn" access="isAuthenticated()"/>
-                <c:if test="${loggedIn}">
+                <sec:authorize access="isAuthenticated()">
                     <li>
                         <a href="<c:url value="/logout" />">Logout</a>
                     </li>
-                </c:if>
+                </sec:authorize>
             </ul>
         </div>
         <!-- /.navbar-collapse -->

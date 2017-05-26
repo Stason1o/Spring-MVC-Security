@@ -57,11 +57,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -107,11 +107,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -143,9 +143,11 @@
                             <div class="cartList">
                                 <img src="${piece.product.photo}" style="width:100px;height:100px">
                                 <div>
+                                    <br>
                                     ${piece.product.name}, suitable for ${piece.product.car} ${piece.product.carModel}(${piece.product.carYear})
                                 costs ${piece.product.price} MDL
                                 </div>
+
                                     <button class="btn btn-block btn-primary btn-default" type="submit"
                                         value="${piece.product.id}" name="carPieceIdToDelete">Delete from cart</button>
                                 <c:set var="total" value="${total + piece.product.price}"/>

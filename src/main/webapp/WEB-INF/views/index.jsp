@@ -56,11 +56,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
-                        <li>
-                            <a href="<c:url value="/logout" />">Logout</a>
-                        </li>
-                    </c:if>
+                    <sec:authorize access="isAuthenticated()">
+                    <li>
+                        <a href="<c:url value="/logout" />">Logout</a>
+                    </li>
+
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -73,6 +73,7 @@
                     <li>
                         <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
                     </li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -106,11 +107,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>

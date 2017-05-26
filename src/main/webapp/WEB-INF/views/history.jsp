@@ -57,11 +57,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -107,11 +107,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -160,7 +160,9 @@
                                 </c:forEach>
                             </c:when>
                             <c:otherwise>
-                                <h1>You don't have any items in your cart to buy</h1>
+                                <div class="noscroll">
+                                    <h1>You haven't bought any item yet.</h1>
+                                </div>
                             </c:otherwise>
                         </c:choose>
                     </div>

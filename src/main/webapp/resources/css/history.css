@@ -53,6 +53,7 @@ img:hover{
 }
 
 .cartList{
+    overflow-y: scroll;
     height: 100px;
     margin: 10px 0 10px 0;
     /*opacity: ;*/
@@ -79,21 +80,20 @@ img:hover{
 }
 
 .wrapper{
-    overflow-y: scroll;
-    height: 430px;
-    max-height: 430px;
+    height: 330px;
+    max-height: 330px;
 }
 
-.wrapper::-webkit-scrollbar{
+.cartList::-webkit-scrollbar{
     width: 14px;
 }
 
-.wrapper::-webkit-scrollbar-track {
+.cartList::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 10px;
 }
 
-.wrapper::-webkit-scrollbar-thumb {
+.cartList::-webkit-scrollbar-thumb {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,1);
 }
@@ -106,6 +106,17 @@ img:hover{
 
 .li.right{
     margin-left: 120px;
+}
+
+.noscroll{
+    height: 330px;
+    max-height: 330px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+h1{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 

@@ -58,6 +58,7 @@ img{
     width: auto;
     background: #222222;
     margin-top: 10px;
+    margin-right: 200px;
 }
 
 #listCartContent{
@@ -65,7 +66,7 @@ img{
 }
 
 .li.right{
-    margin-left: 300px;
+    margin-left: 100px;
 }
 
 .moneyAmount{
@@ -77,10 +78,14 @@ img{
 .outer_container{
     width: 600px;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 8%;
 }
 td{
     width: inherit;
+}
+
+h1{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 

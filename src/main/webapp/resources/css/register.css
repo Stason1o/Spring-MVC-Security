@@ -15,8 +15,9 @@ body {
 }
 
 .col-md-6.col-sm-12{
-    color: #4cbde0;
+    color: whitesmoke;
     margin-top: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .outer_container {
@@ -25,8 +26,9 @@ body {
 
 
 .form-group{
-    color: #4cbde0;
+    color: whitesmoke;
     width: 350px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .form-actions {
@@ -54,4 +56,7 @@ body {
     border: 1px solid #ccc;
     color: #333;
     background-color: #f0f0f0;
+}
+.btn.btn-block.btn-primary.btn-default, .btn.btn-lg.btn-primary.btn-block {
+    background: #222222;
 }
