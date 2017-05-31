@@ -123,11 +123,11 @@ public class PageController {
         return "redirect:/index";
     }
 
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String indexPage(ModelMap modelMap){
-        modelMap.addAttribute("user", getPrincipal());
-        return "index";
-    }
+//    @RequestMapping(value = "/index", method = RequestMethod.GET)
+//    public String indexPage(ModelMap modelMap){
+//        modelMap.addAttribute("user", getPrincipal());
+//        return "index";
+//    }
 
     @RequestMapping(value = "/history", method = RequestMethod.GET)
     public String showHistoryPage(ModelMap modelMap){
