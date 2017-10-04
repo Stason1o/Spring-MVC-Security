@@ -70,11 +70,11 @@
 			<version>${hibernate.version}</version>
 		</dependency>
 
-		<!-- MySQL -->
+		<!-- Postgresql -->
 		<dependency>
-			<groupId>mysql</groupId>
-			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901.jdbc4</version>
 		</dependency>
 
 		<dependency>
