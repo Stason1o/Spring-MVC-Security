@@ -1,6 +1,7 @@
 <%@ page import="org.springframework.security.core.context.SecurityContextHolder" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
@@ -57,17 +58,18 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
                     <li>
                         <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
                     </li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -101,9 +103,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <li>
-                        <a href="<c:url value="/logout" />">Logout</a>
-                    </li>
+                    <sec:authorize access="isAuthenticated()">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->

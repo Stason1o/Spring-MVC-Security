@@ -46,7 +46,7 @@ body{
 }
 
 .login-container {
-    margin-top: 50px;
+    margin-top: 30px;
     /*background-color: floralwhite;*/
     width: 40%;
     left: 30%;
@@ -59,4 +59,19 @@ body{
 }
 .login-form {
     padding: 10%;
+}
+
+.btn.btn-block.btn-primary.btn-default, .btn.btn-lg.btn-primary.btn-block {
+    background: #222222;
+}
+
+h1{
+    font-size: 50px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+p{
+    margin-top: 20px;
+    font-size: 18px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }

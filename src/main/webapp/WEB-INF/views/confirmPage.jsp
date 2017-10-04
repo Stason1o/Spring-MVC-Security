@@ -57,11 +57,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -71,7 +71,7 @@
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
-                    <li class="li right">
+                    <li>
                         <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
                     </li>
                 </ul>
@@ -107,11 +107,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+                    </sec:authorize>
                     <sec:authorize var="adminRole" access="hasRole('ROLE_ADMIN')"/>
                     <c:if test="${adminRole}">
                         <li>
@@ -131,7 +131,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 col-sm-12">
-                <h1>Welcome to Main page, ${loggedUser.username}</h1>
+                <h1>Please enter the address for delivery.</h1>
                 <div class="wrapper">
                     <table class="outer_container">
                         <tr>
@@ -162,24 +162,16 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr>
-                            <form:form method="POST" action="/confirmPage/${totalPrice}">
-                                <td colspan="1">
-                                    <div class="form-actions">
-                                        <input type="submit" class="btn btn-block btn-primary btn-default"
-                                                name="Confirm order"/>
-                                    </div>
-                                </td>
-                            </form:form>
-                                <td>
-                                    <div class="form-actions">
-                                        <a href="<c:url value="/cart" />" class="btn btn-block btn-primary btn-default">Back to Cart
-                                            page</a>
-                                    </div>
-                                </td>
-
-                        </tr>
                     </table>
+                    <form:form method="POST" action="/confirmPage/${totalPrice}">
+                        <div class="form-actions">
+                            <input type="submit" class="btn btn-block btn-primary btn-default"
+                                   name="Confirm order"/>
+                            <a href="<c:url value="/cart" />" class="btn btn-block btn-primary btn-default">Back to Cart
+                                page
+                            </a>
+                        </div>
+                    </form:form>
                 </div>
             </div>
         </div>

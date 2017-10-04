@@ -53,10 +53,12 @@ img:hover{
 }
 
 .cartList{
+    /*overflow-y: scroll;*/
     height: 100px;
     margin: 10px 0 10px 0;
     /*opacity: ;*/
-    background: dimgray;
+    background: black;
+    opacity: 0.7;
 }
 
 .productInfo{
@@ -79,9 +81,9 @@ img:hover{
 }
 
 .wrapper{
+    height: 330px;
+    max-height: 330px;
     overflow-y: scroll;
-    height: 430px;
-    max-height: 430px;
 }
 
 .wrapper::-webkit-scrollbar{
@@ -106,6 +108,17 @@ img:hover{
 
 .li.right{
     margin-left: 120px;
+}
+
+.noscroll{
+    height: 330px;
+    max-height: 330px;
+    text-align: center;
+    margin-top: 150px;
+}
+
+h1{
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 

@@ -60,17 +60,18 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <c:if test="<%=SecurityContextHolder.getContext().getAuthentication() != null%>">
+                    <sec:authorize access="isAuthenticated()">
                         <li>
                             <a href="<c:url value="/logout" />">Logout</a>
                         </li>
-                    </c:if>
+
                     <li class="li right">
                         <a href="<c:url value="/cart"/> "><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a>
                     </li>
                     <li>
                         <a href="<c:url value="/history"/>"><span class="glyphicon glyphicon-list-alt"></span>History of purchases </a>
                     </li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -103,9 +104,11 @@
                     <li>
                         <a href="<c:url value="/contact" />">Contact</a>
                     </li>
-                    <li>
-                        <a href="<c:url value="/logout" />">Logout</a>
-                    </li>
+                    <sec:authorize access="isAuthenticated()">
+                        <li>
+                            <a href="<c:url value="/logout" />">Logout</a>
+                        </li>
+                    </sec:authorize>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -128,15 +131,15 @@
                     We provide the spare parts for the majority of the cars.
                     In assortment there is a wide choice of spare parts, such as:<br>
                     <ul>
-                        <li>Body parts</li>
-                        <li>Optics</li>
-                        <li>Radiators</li>
-                        <li>Engine parts</li>
+                        <li>Body parts: bumpers,   cowls,   wings</li>
+                        <li>Optics:   headlights,   headlight glass,   side mirrors</li>
+                        <li>Radiators:   water radiator,   cooling radiator,   truck radiators</li>
+                        <li>Engine parts:   compressors </li>
                         etc.
                     </ul>
 
+                    Our location <a href="<c:url value="/contact"/>"> here</a>
 
-                <!--TODO finish the text!-->
                 </div>
             </div>
         </div>

@@ -4,20 +4,31 @@
 
 h1{
     text-align: center;
-    opacity: 0.7;
-    margin: 50px 150px 50px 200px;
+    margin: 50px 150px 20px 200px;
     padding: 10px;
     color: #fff;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     /*border: 4px double #2e6da4;*/
     /*border-radius: 30px;*/
 }
 
 .innerWrapper{
-    background: #222222;
+    /*background: #222222;*/
     display: block;
     width: 850px;
     height: 400px;
     margin: auto;
-    opacity:0.8;
-    font-size: 18px;
+    /*opacity:0.8;*/
+    font-size: 22px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+a{
+    color: whitesmoke;
+}
+
+a:hover{
+    color: blue;
+
+}
+

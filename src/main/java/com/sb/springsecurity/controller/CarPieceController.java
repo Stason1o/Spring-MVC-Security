@@ -35,15 +35,15 @@ public class CarPieceController {
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String redirectToHelloPage(ModelMap modelMap) {
-        return "redirect:/welcome";
+        return "redirect:/index";
     }
 
-    @RequestMapping(value = "/welcome", method = RequestMethod.GET)
+    @RequestMapping(value = "/index", method = RequestMethod.GET)
     public String helloPage(ModelMap modelMap) {
         if (getPrincipal().equals(ANONYMOUS_USER))
             return "redirect:/login";
         modelMap.addAttribute("user", getPrincipal());
-        return "welcome";
+        return "index";
     }
 
     //For add and update person both
